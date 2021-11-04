@@ -1,0 +1,742 @@
+
+<!doctype html public "-//W3C//DTD HTML 4.01//EN"	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<title>green_dev</title>
+<meta charSet="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="msvalidate.01" content="8DF01F1C8A93B195D74F287363614E8F"> <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<meta name="description" content="Find screen size and throw distance for the Canon REALiS WUX500ST projector.">
+<meta name="twitter:description" value="Find screen size and throw distance for the Canon REALiS WUX500ST projector.">
+<meta itemprop="description" content="Find screen size and throw distance for the Canon REALiS WUX500ST projector.">
+<meta name="rating" content="General">
+<meta property="og:image" content="https://www.projectorcentral.com/images/projectors2/img10004.jpg"/>
+<meta property="og:type" content="website"/>
+<script src="jquery-3.3.1.min.js"></script>
+<meta name="thumbnail" content="https://www.projectorcentral.com/images/projectors2/img10004.jpg"/>
+<link rel="stylesheet" href="style.css?v=49" type="text/css"> <style type="text/css">
+
+.calc-col1 {max-width:750px;width:100%;margin-right:40px;}
+.calc-title {color:#131313;margin:0 0 20px 0;font-size:32px;line-height:38px;font-weight: bold;}
+.calc-col1 p {color: #131313;font-size: 14px;line-height: 20px !important;margin:0 0 30px 0;}
+
+
+.calc-tabs {display:flex;}
+.calc-tab {display:block;color:#ffffff;font-size:16px;line-height:19px;font-weight:bold;padding:12px 20px;background-color:#046CA7;border:1px solid #046CA7;border-bottom:1px solid #3496D1;border-top-right-radius: 6px;border-top-left-radius: 6px;margin-right:10px;margin-bottom:-2px;}
+.calc-tab.active {background-color:#3496D1;}
+.calc-tab:not(.active) {cursor:pointer;}
+
+
+.calc-search {display:none;padding:25px 20px 18px 20px;margin:0 auto 20px auto;border: 1px solid #046CA7;border-radius: 5px;border-top-left-radius:0;background-color: #3496D1;}
+.calc-search.active {display:block;}
+.calc-search h3 {display:inline-block;font-weight:bold;margin:0 0 12px 0;font-size:16px;line-height:19px;color:#ffffff;}
+/* .calc-search h3:before {content: url(/images/calc/calc-search-dark-blue.svg);margin-right: 8px;vertical-align:middle;} */
+.calc-search h4 {display:inline-block;font-weight:bold;margin:0 0 7px 0;font-size:14px;line-height:16px;color:#ffffff;}
+.calc-search h4.disabled {color:#004E7E;opacity:0.5;}
+.calc-search select {margin-bottom:10px;height:40px;font-size:14px;border-radius:3px;border:1px solid #dadada;}
+.calc-search select:disabled {color:#004E7E;background-color:rgba(4, 108, 167, 0.5);border:1px solid #046CA7;opacity:1;}
+.calc-search option {border-radius: 2px;}
+.calc-search p {font-size:14px;color:#ffffff;text-align:center;margin:0;}
+.calc-search a {color:#000000;}
+.calc-search .calc-disc {float:right;font-size:14px;color:#ffffff;line-height:16px;display:block;margin-top:4px;}
+.calc-search-form {width:100%}
+.calc-mfg-form {flex-basis:200px;flex-grow:9999;}
+/* .calc-mfg-form h4:before {content: url(/images/calc/calc-pj-dark-icon.png);margin-right: 10px;vertical-align:text-top;} */
+.calc-model-form {flex-basis:200px;flex-grow:9999;}
+.calc-mfg-select {width:100%;}
+.calc-model-select {width:100%;}
+
+.calc-throw-form {margin-bottom:20px;}
+.calc-throw-form h3 {display:block;}
+.calc-throw-form h3:before {content: url(/images/calc/calc-throw-dist-icon.svg);margin-right: 10px;vertical-align:text-top;}
+.calc-image-size-form {margin-bottom:20px;}
+.calc-image-size-form h3 {display:block;}
+.calc-image-size-form h3:before {content: url(/images/calc/calc-image-size-icon.svg);margin-right: 10px;vertical-align:text-top;}
+.calc-units-form {margin-bottom:20px;}
+.calc-units-form h3 {display:block;}
+.calc-units-form h3:before {content: url(/images/calc/calc-units-icon.svg);margin-right: 10px;vertical-align:text-top;}
+.calc-tr-form {margin-bottom:20px;}
+.calc-tr-form h4 {display:block;}
+.calc-tr-form h4:before {content: url(/images/calc/calc-min-max.svg);margin-right: 10px;vertical-align:text-top;}
+.calc-tr-form h5 {display:block;font-weight:normal;font-style:italic;margin:0 0 7px 0;font-size:14px;line-height:16px;color:#ffffff;}
+.calc-search input[type="submit"] {margin-bottom:20px;color: #3496D1;font-size: 14px;font-weight: bold;line-height: 16px;text-align: center;background-color:#ffffff;padding:12px 53px;box-shadow: 0 4px 10px 0 rgba(0,86,135,0.9);}
+
+.calc-dash {
+	text-align:center;
+	font-size:20px;
+	color:#004E7E;
+	font-weight:bold;
+	line-height:40px;
+	margin: 0 5px 20px 5px;}
+
+.calc-throw-divider-dp {height:20px;}
+
+.calc-units-wrap {border: solid 3px #046CA7;overflow: hidden;background-color:#046CA7;border-radius:5px;height:40px;}
+.calc-units-wrap input[type=radio] {position: absolute;visibility: hidden;display: none;}
+label {color: #ffffff;display: inline-block;cursor: pointer;padding: 9px 20px;font-size:14px;line-height:16px;border-radius:3px;}
+input[type=radio]:checked + label {color: #046CA7;background: #ffffff;font-weight:bold;}
+
+
+
+.search-row {display:flex;flex-wrap:wrap;align-items:center;justify-content:space-around;}
+.search-divider-dp {height:119px;width:1px;border-right: 2px solid #1B80BB;margin: -20px 15px;}
+.search-divider-mb {border-top: 2px solid #1B80BB;width:100%;height:1px;margin:10px 0 16px 0;}
+
+#pjSearchBox{margin-bottom:10px;width:100%;height:40px;padding-left:10px;box-sizing:border-box;font-size:14px;
+	/* background:url(images/calc/calc-search-light-blue.svg) no-repeat 97% 10px;padding-right: 30px;background-color:white;border-radius:3px;*/} 
+
+.part-header {display:flex;padding:30px 0;justify-content:space-between;}
+
+/* .pj-photo {margin-bottom:20px;} */
+/* .pj-photo img {width:200px;} */
+
+.pj-specs {margin-bottom:20px;max-width:500px;width:100%;margin-right:40px;}
+.pj-specs h2 {color: #131313;font-size: 26px;font-weight: bold;line-height: 30px;margin-bottom:10px;}
+.pj-specs h2 a {color:black;}
+.pj-specs p {color: #131313;font-size: 16px;line-height: 19px;margin-bottom:20px;}
+
+.pj-add-to-compare {color:#3496D1;font-weight:bold;font-size:16px;line-height:19px;margin-bottom:20px;display:block;}
+/* .pj-add-to-compare:before {content: url(images/add-to-compare.svg);margin-right:4px;cursor: pointer;} */
+
+.pj-details-button, .pj-buy-online {display:inline-block;background-color:#3496D1;color: #FFFFFF !important;font-size: 16px;font-weight: bold;line-height: 19px;text-align: center;padding:10px 20px;margin:0 5px 10px 5px;}
+.pj-buy-online {background-color:#EBA234}
+.pj-details-button:hover {background-color:#318BC3;text-decoration:none;}
+.pj-buy-online:hover {background-color:#e49928;text-decoration:none;}
+
+
+
+/* Quick Name Search Styles */
+.ac_box {float:right;color:white;background-color:#636D48;padding:5px;border-radius: 6px;border:1px SOLID #000;-moz-box-shadow: 3px 3px 4px #bbb;
+	-webkit-box-shadow: 3px 3px 4px #bbb;box-shadow: 3px 3px 4px #bbb;margin-bottom:20px;}
+.ac_results {padding: 0px;border: 1px solid WindowFrame;background-color: Window;overflow: hidden;}
+.ac_results ul {width: 100%;list-style-position: outside;list-style: none;padding: 0;margin: 0;background-color:white;}
+.ac_results iframe {display:none;/*sorry for IE5*/display/**/:block;/*sorry for IE5*/position:absolute;top:0;left:0;z-index:-1;/*filter:mask();*/width:3000px;height:3000px;}
+.ac_results li {margin: 0px;padding: 8px 5px;cursor: pointer;display: block;width: 100%;font: menu;font-size: 14px;overflow: hidden;}
+.ac_loading {background : url("images/loading.gif") right center no-repeat;}
+.ac_over {background-color: #3496d1;color: white;}
+
+.calcRespFrame{width:1px;min-width:100%;*width:100%;border:none;overflow:hidden;min-height:500px;}
+
+
+.print-btn-ff {display:none;font-size:16px;line-height:20px;color:white;background-color:#3496d1;padding:10px 20px;border:0;text-align:center;margin:0 auto 30px auto;}
+.print-btn-ff:hover {background-color:#318BC3;cursor:pointer;}
+
+@media screen and (max-width:767px){
+	.part-header {flex-wrap: wrap;}
+	/* .pj-photo {width:100%;} */
+	/* .pj-photo img {width:100%;max-height: 250px;object-fit: scale-down;} */
+	.pj-specs {text-align:center;margin-right:0;max-width:none;}
+	
+
+	.calc-col1 {margin:0;}
+	.calc-mfg-form {margin-bottom:10px;flex-basis:400px !important;}
+	.calc-model-form {margin-bottom:10px;flex-basis:400px !important;}
+}
+@media screen and (min-width: 768px) and (max-width:1023px) {
+	.part-header {flex-wrap: wrap;}
+}
+@media screen and (min-width:1024px), print { /* IE 6,7,9,10 hack to use desktop */
+
+
+}
+
+@supports (-moz-appearance:none) {
+	 .print-btn-ff {display:inline-block;}
+}
+
+@media print {
+	.calc-title{display:none;}
+	.calc-col1{display:none;}
+	
+	
+	.calc-faq{display:none;}
+	.avgPrice{display:none;}
+	#shareContainer{display:none};
+	.calcRespFrame{height:1500px !important;}
+	.pj-add-to-compare{display:none;}
+	#breadCrumb{display:none;}
+	.calc-divider{display:none;}
+	.pj-details-button{display:none;}
+	.pj-buy-online{display:none;}
+	/* .pj-photo {margin-right:30px;margin-bottom:0;} */
+	.pj-specs {margin-bottom:0;margin-right:0 !important;width:auto !important;}
+	.part-header {padding:0;justify-content:center;margin-top:30px;}
+
+	section {padding:0;}
+	#mainWrapper {margin:0;padding:0;}
+	#content {width:800px !important;}
+	#main-site-wrap {width:800px !important;}
+	.print-btn-ff {display:none;}
+}
+
+
+
+</style> 
+<script>
+	// alert( document.cookie );
+	// var dataCoocie = document.cookie;
+	// console.log(dataCoocie);
+//   (function() {
+// 	var cx = '014062971607211910652:2fq7bvkk9da';
+// 	var gcse = document.createElement('script');
+// 	gcse.type = 'text/javascript';
+// 	gcse.async = true;
+// 	gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+// 	var s = document.getElementsByTagName('script')[0];
+// 	s.parentNode.insertBefore(gcse, s);
+//   })();
+//   setTimeout( function(){document.getElementById('gsc-i-id1').placeholder = 'Search...';document.getElementById('gsc-i-id2').placeholder = 'Search...';}, 1000);
+</script>
+<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0082/4468.js" async="async"></script> 
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-3018570-1"></script>
+	<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-3018570-1');
+	</script>
+	
+<style type="text/css">
+
+	.top-ribbon {width:100%;background-image:linear-gradient(90deg,#409BD2,#065483);}
+	.top-ribbon img {max-width:1440px;margin:0 auto;display:block;}
+
+
+	.topNavbtn {
+		background-color: white;
+		font-weight:bold;
+		font-size: 16px;
+		border: none;
+		padding:0;
+		padding-bottom:3px;
+		border-bottom: 3px solid white;
+	}
+	.dropdown {
+		text-align:left;
+		font-weight:normal;
+		height:43px;
+	}
+	.no-dropdown {margin-bottom:18px;}
+	.navFly {
+		display: none;
+		position: absolute;
+		top:134px;
+		right:40px;
+		background-color: white;
+		box-shadow: inset 0px 13px 16px -10px rgba(0,0,0,0.2), 0px 15px 10px 4px rgba(0,0,0,0.2);
+		padding:40px 40px 20px 40px;
+		margin-left:-40px;
+	}
+	.navFly-content {
+		display:flex;
+		justify-content:space-between;
+	}
+	.navFly-content .v-divider{border-right:1px solid #ececec;margin-top:-40px;margin-bottom:-20px;}
+	.find-pj-nav-inset{background-color:#f7f7f7;font-size:15px;line-height:18px;
+		display:flex;align-items:center;padding:15px 40px 15px 40px;width:100%;height:76px;
+		position:absolute;bottom:0;left:0;}
+	.find-pj-nav-inset a {margin:0 !important;}
+	.find-pj-nav-btn{height:39px;width:178px;line-height:39px;background-color:#3496D1;text-align:center;color:white;font-size:16px;font-weight:bold;margin-right:30px;}
+	.find-pj-nav-btn:hover{background-color:#318BC3;}
+	.find-pj-nav-btn img{margin-right:10px;margin-bottom:-2px;}
+
+	/* Links inside the dropdown */
+	.navFly-content a {
+		color: black;
+		padding: 0;
+		margin:0 0 20px 0;
+		text-decoration: none;
+		display: block;
+		line-height:20px;
+	}
+	.navFly .taller a {margin-bottom:25px;}
+	.navFly h3{
+		font-size:14px;
+		line-height:16px;
+		margin:0 0 21px 0;
+		padding:0;
+	}
+
+
+	.navCol{
+		line-height:16px;
+	}
+	.navCol .book-icon{padding-left:28px;background: url(/images/wrap2/book-icon.svg) no-repeat left -1px;}
+	.navCol .trophy-icon{padding-left:28px;background: url(/images/wrap2/trophy-icon.svg) no-repeat left -1px;}
+	.navCol .star-icon{padding-left:28px;background: url(/images/wrap2/star-icon.svg) no-repeat left -1px;}
+	.navCol .tag-icon{padding-left:28px;background: url(/images/wrap2/tag-icon.svg) no-repeat left -1px;}
+	.navCol .screen-icon{padding-left:28px;background: url(/images/wrap2/screen-icon.svg) no-repeat left 2px;}
+	.navCol .lens-icon{padding-left:28px;background: url(/images/wrap2/lens-icon.svg) no-repeat left 2px;}
+	.navCol .projector-icon{padding-left:28px;background: url(/images/wrap2/projector-icon.svg) no-repeat left -1px;}
+
+	/* Change color of dropdown links on hover */
+	.navFly-content a:hover {color: #3496D1 !important;border:0;}
+
+	/* Show the dropdown menu on hover */
+	.dropdown:hover .navFly {display: block;}
+
+	/* Change the background color of the dropdown button when the dropdown content is shown */
+	.dropdown:hover .topNavbtn {padding-bottom:3px;border-bottom: 3px solid #3496D1;text-decoration: none;}
+</style>
+
+</head>
+
+
+
+
+<body  itemscope itemtype="http://schema.org/WebPage">
+
+
+
+
+
+<div id="main-site-wrap">
+	<div id="main-site-overlay"></div>
+
+
+	<div id="top-of-site"></div>
+
+	<div id="mainWrapper">
+
+			
+
+		<div id="mainContentWrapper">
+
+			
+			<div id="mainContent" >
+
+				<section> 
+					<div itemprop="breadcrumb" id="breadCrumb">
+						<a href="https://www.projectorcentral.com" title="Home">Home</a> / <a href="mfg.cfm" title="Projector Manufacturers">Manufacturers</a> / <a href="Epson.htm" title="Epson EB-PU2010W Manufacturer">Epson</a> / <a href="Epson-EB-PU2010W.htm" title="Epson EB-PU2010W Specs">Epson EB-PU2010W</a> / EB-PU2010W Projection Calculator 
+					</div>
+				</section>
+				<div id="content" style="width:100%;" class="">
+					
+
+ <script>
+
+	window.addEventListener("beforeprint", beforePrintIFrame);
+	function beforePrintIFrame() {
+		// only works in Chrome, not FF to resize iframe canvas before printing
+		document.getElementById('pcCalcIFrame').style = 'width:800px;min-width:auto;';
+		resizeIframe();
+	}
+	window.addEventListener("afterprint", afterPrintIFrame);
+	function afterPrintIFrame() {
+		document.getElementById('pcCalcIFrame').style = 'width:1px;min-width:100%;';
+		resizeIframe();
+	}
+
+	var pcIFrameLastHeight = 0, pcIFrameNewHeight = 0;
+	// function resizeIframe(obj) {
+	// 	setInterval(function(){
+	// 		//pcIFrameNewHeight = obj.contentWindow.document.body.scrollHeight + 'px';
+	// 		pcIFrameNewHeight = document.getElementById('pcCalcIFrame').contentWindow.document.body.scrollHeight + 'px';
+	// 		if(pcIFrameLastHeight != pcIFrameNewHeight){
+	// 			pcIFrameLastHeight = pcIFrameNewHeight;
+	// 			//obj.style.height = pcIFrameLastHeight;
+	// 			document.getElementById('pcCalcIFrame').height = pcIFrameLastHeight;
+	// 		}
+	// 	}, 500);
+	// }
+</script> 
+
+<section>
+
+	<div id="b_10_mb" class="bStyle"></div>
+
+	<h1 class="calc-title">Калькулятор расстояния проекции проектора</h1>
+	<div style="display:flex;justify-content:space-between;align-items: flex-end;">
+
+		
+		<div class="calc-col1">
+
+			<div class="calc-tabs">
+				<div id="calcPJTab" class="calc-tab active">Выберите проектор</div>
+				<div id="calcThrowTab" class="calc-tab">Поиск по расстоянию проекции / размеру экрана</div>
+			</div>
+
+			
+			
+
+			<div id="calcPJForm" class="calc-search active">
+				<div class="search-row">
+
+					
+					<div class="calc-search-form">
+						<h3>Поиск по проектору</h3>
+						<form action="projection-calculator-pro.cfm#calc" method="post" name="selPJ">
+							<input type="text" name="qs" id="pjSearchBox" value="" placeholder="Search" autocomplete="off" class="ac_input">
+							<input type="hidden" name="qsid" class="ac_results_id" value="">
+						</form>
+					</div>
+					<div class="search-divider-mb"></div>
+
+					
+					<div class="calc-mfg-form">
+						<h4>Производитель проектора</h4>
+						<form action="projection-calculator-pro.cfm" method="post" class="calc-mfg-form">
+							<select name="mfg_id" onchange="submit()" class="calc-mfg-select">
+								<option value="0">Choose Brand </option><optgroup label="Current Mfgs"> <option value="364">AAXA Technologies </option><option value="126">Acer </option><option value="486">Anker </option><option value="490">Appotronics </option><option value="422">ASUS </option><option value="26">Barco </option><option value="169">BenQ </option><option value="42">Boxlight </option><option value="135">Canon </option><option value="333">Canon Europe </option><option value="157">Christie </option><option value="297">Cineversum </option><option value="56">Digital Projection </option><option value="142">Dream Vision </option><option value="58">Dukane </option><option value="59">EIKI </option><option value="496">Elite Projector </option><option value="67" selected="">Epson </option><option value="332">Epson Europe </option><option value="498">EZCast </option><option value="495">Fujifilm </option><option value="497">Hachi </option><option value="172">HP </option><option value="78">InFocus </option><option value="491">JmGO </option><option value="87">JVC </option><option value="335">JVC Europe </option><option value="94">Kodak </option><option value="147">LG Electronics </option><option value="505">LM3X </option><option value="475">miroir </option><option value="103">NEC </option><option value="51">Optoma </option><option value="106">Panasonic </option><option value="334">Panasonic Europe </option><option value="107">Philips </option><option value="440">Pico Genie </option><option value="421">Pyle Pro </option><option value="438">RCA </option><option value="129">Samsung </option><option value="130">SIM2 Multimedia </option><option value="119">Sony </option><option value="494">VAVA </option><option value="122">ViewSonic </option><option value="133">Vivitek </option><option value="506">Wemax </option><option value="356">Wolf Cinema </option><option value="487">XGIMI </option><option value="492">Xiaomi </option></optgroup> <optgroup label="Discontinued Mfgs"> <option value="1">3M * </option><option value="144">A+K * </option><option value="329">ACTO * </option><option value="344">Aiptek * </option><option value="358">Anthem * </option><option value="18">Apollo * </option><option value="127">APTi * </option><option value="412">AriusTek * </option><option value="383">Artec * </option><option value="20">ASK * </option><option value="193">ASK Proxima * </option><option value="343">Atlantis * </option><option value="148">AVIO * </option><option value="362">Bonitor * </option><option value="471">Brilens * </option><option value="437">Brookstone * </option><option value="138">Buhl * </option><option value="179">Casio * </option><option value="472">Celluon * </option><option value="382">Chinavasion * </option><option value="44">Chisholm * </option><option value="143">Compaq * </option><option value="468">Coolux * </option><option value="153">CTX * </option><option value="128">Davis * </option><option value="173">Dell * </option><option value="162">Delta * </option><option value="325">Digital Galaxy * </option><option value="160">DWIN * </option><option value="66">Elmo * </option><option value="225">eLux * </option><option value="146">Everest * </option><option value="152">Faroudja * </option><option value="371">FAVI * </option><option value="150">Fujitsu * </option><option value="178">Gateway * </option><option value="394">H-PEC * </option><option value="489">Hibeam * </option><option value="76">Hitachi * </option><option value="77">Hughes-JVC * </option><option value="164">IBM * </option><option value="163">iiyama * </option><option value="170">InFocus Home * </option><option value="481">INFOTO * </option><option value="449">Innoio * </option><option value="324">KAGA Components * </option><option value="229">Knoll Systems * </option><option value="149">Lasergraphics * </option><option value="338">Leica * </option><option value="303">Lenovo * </option><option value="95">Liesegang * </option><option value="330">Lightspeed Design * </option><option value="99">Lightware * </option><option value="456">Lucem * </option><option value="459">Lumex * </option><option value="161">Luxeon * </option><option value="151">Marantz * </option><option value="493">Maxell * </option><option value="101">Megapower * </option><option value="190">Microtek * </option><option value="339">Microvision * </option><option value="451">Mimio * </option><option value="102">Mitsubishi * </option><option value="141">Mustek * </option><option value="395">NuVision * </option><option value="105">nView * </option><option value="348">Oculon * </option><option value="191">Olympus * </option><option value="331">Optoma Europe * </option><option value="175">Panasonic Home * </option><option value="108">Pioneer * </option><option value="328">Pioneer Europe * </option><option value="261">Pixa * </option><option value="306">Planar * </option><option value="109">PLUS * </option><option value="171">PLUS Home * </option><option value="110">Polaroid * </option><option value="432">Portronics * </option><option value="176">projectiondesign * </option><option value="479">Promacto * </option><option value="480">Promethean * </option><option value="113">Proxima * </option><option value="477">Proxima Displays * </option><option value="167">Quanix * </option><option value="365">Ray Displays * </option><option value="411">Ricoh * </option><option value="136">Runco * </option><option value="265">Sagem * </option><option value="300">Sahara * </option><option value="116">Sanyo * </option><option value="137">Sayett * </option><option value="467">Sharp Japan * </option><option value="117">Sharp PG Series * </option><option value="166">Sharp XG Series * </option><option value="165">SharpVision * </option><option value="443">SMART * </option><option value="436">Specktron * </option><option value="174">Studio Experience * </option><option value="323">TAXAN * </option><option value="458">TeamBoard * </option><option value="168">Toshiba DPD * </option><option value="336">Toshiba Europe * </option><option value="121">Toshiba TACP * </option><option value="391">Uniden * </option><option value="132">Vidikron * </option><option value="469">Vieway * </option><option value="351">VisionQuest * </option><option value="460">ViviBright * </option><option value="177">Vivitar * </option><option value="340">WowWee * </option><option value="240">XEROX * </option><option value="159">Yamaha * </option><option value="145">Yokogawa * </option><option value="123">Zenith * </option><option value="474">ZTE * </option></optgroup></select><br> 
+						</form>
+					</div>
+
+					<div class="tbdp" style="width:10px;"></div>
+
+					<div class="calc-model-form">
+						<h4>Модель</h4>
+						<div class="calc-disc">* =  снято с производства</div>
+						<form action="projection-calculator-pro.cfm##calc" method="post" style="margin-top: 4px;">
+							
+							<select name="part_id" onchange="window.location.href=this.value;" class="calc-model-select"> <option value="projection-calculator-pro.cfm">Choose Model</option> <optgroup label="Current Projectors"> <option value="Epson-880X-projection-calculator-pro.htm#calc">880X</option> <option value="Epson-BrightLink_1480Fi-projection-calculator-pro.htm#calc">BrightLink 1480Fi</option> <option value="Epson-BrightLink_1485Fi-projection-calculator-pro.htm#calc">BrightLink 1485Fi</option> <option value="Epson-BrightLink_725Wi-projection-calculator-pro.htm#calc">BrightLink 725Wi</option> <option value="Epson-BrightLink_735Fi-projection-calculator-pro.htm#calc">BrightLink 735Fi</option> <option value="Epson-EB-PU1006W-projection-calculator-pro.htm#calc">EB-PU1006W</option> <option value="Epson-EB-PU1007B-projection-calculator-pro.htm#calc">EB-PU1007B</option> <option value="Epson-EB-PU1007W-projection-calculator-pro.htm#calc">EB-PU1007W</option> <option value="Epson-EB-PU1008B-projection-calculator-pro.htm#calc">EB-PU1008B</option> <option value="Epson-EB-PU1008W-projection-calculator-pro.htm#calc">EB-PU1008W</option> <option value="Epson-EB-PU2010B-projection-calculator-pro.htm#calc">EB-PU2010B</option> <option value="Epson-EB-PU2010W-projection-calculator-pro.htm#calc" selected="">EB-PU2010W</option> <option value="Epson-EF-100B-projection-calculator-pro.htm#calc">EF-100B</option> <option value="Epson-EF-100W-projection-calculator-pro.htm#calc">EF-100W</option> <option value="Epson-EpiqVision_Mini_EF11-projection-calculator-pro.htm#calc">EpiqVision Mini EF11</option> <option value="Epson-EpiqVision_Mini_EF12-projection-calculator-pro.htm#calc">EpiqVision Mini EF12</option> <option value="Epson-EpiqVision_Ultra_LS300B-projection-calculator-pro.htm#calc">EpiqVision Ultra LS300B</option> <option value="Epson-EpiqVision_Ultra_LS300-projection-calculator-pro.htm#calc">EpiqVision Ultra LS300W</option> <option value="Epson-EpiqVision_Ultra_LS500-B-projection-calculator-pro.htm#calc">EpiqVision Ultra LS500-B</option> <option value="Epson-EpiqVision_Ultra_LS500-W-projection-calculator-pro.htm#calc">EpiqVision Ultra LS500-W</option> <option value="Epson-EpiqVision_Ultra_LS500-100_B-projection-calculator-pro.htm#calc">EpiqVision Ultra LS500B-100</option> <option value="Epson-EpiqVision_Ultra_LS500-120B-projection-calculator-pro.htm#calc">EpiqVision Ultra LS500B-120</option> <option value="Epson-LS500-projection-calculator-pro.htm#calc">EpiqVision Ultra LS500W-100</option> <option value="Epson-LS500-120-projection-calculator-pro.htm#calc">EpiqVision Ultra LS500W-120</option> <option value="Epson-EX3280-projection-calculator-pro.htm#calc">EX3280</option> <option value="Epson-Pro_EX5260-projection-calculator-pro.htm#calc">EX5260</option> <option value="Epson-EX5280-projection-calculator-pro.htm#calc">EX5280</option> <option value="Epson-Home_Cinema_1080-projection-calculator-pro.htm#calc">Home Cinema 1080</option> <option value="Epson-Home_Cinema_2200-projection-calculator-pro.htm#calc">Home Cinema 2200</option> <option value="Epson-Home_Cinema_2250-projection-calculator-pro.htm#calc">Home Cinema 2250</option> <option value="Epson-Home_Cinema_3200-projection-calculator-pro.htm#calc">Home Cinema 3200</option> <option value="Epson-Home_Cinema_3800-projection-calculator-pro.htm#calc">Home Cinema 3800</option> <option value="Epson-Home_Cinema_4010-projection-calculator-pro.htm#calc">Home Cinema 4010</option> <option value="Epson-Home_Cinema_5050UB-projection-calculator-pro.htm#calc">Home Cinema 5050UB</option> <option value="Epson-Home_Cinema_5050UBe-projection-calculator-pro.htm#calc">Home Cinema 5050UBe</option> <option value="Epson-Home_Cinema_880-projection-calculator-pro.htm#calc">Home Cinema 880</option> <option value="Epson-LightScene_EV-110-projection-calculator-pro.htm#calc">LightScene EV-110</option> <option value="Epson-LightScene_EV-115-projection-calculator-pro.htm#calc">LightScene EV-115</option> <option value="Epson-Powerlite_118-projection-calculator-pro.htm#calc">PowerLite 118</option> <option value="Epson-PowerLite_119W-projection-calculator-pro.htm#calc">PowerLite 119W</option> <option value="Epson-PowerLite_1288-projection-calculator-pro.htm#calc">PowerLite 1288</option> <option value="Epson-PowerLite_1780W-projection-calculator-pro.htm#calc">PowerLite 1780W</option> <option value="Epson-PowerLite_1781W-projection-calculator-pro.htm#calc">PowerLite 1781W</option> <option value="Epson-PowerLite_1785W-projection-calculator-pro.htm#calc">PowerLite 1785W</option> <option value="Epson-PowerLite_1795F-projection-calculator-pro.htm#calc">PowerLite 1795F</option> <option value="Epson-PowerLite_2065-projection-calculator-pro.htm#calc">PowerLite 2065</option> <option value="Epson-PowerLite_2142W-projection-calculator-pro.htm#calc">PowerLite 2142W</option> <option value="Epson-PowerLite_2247U-projection-calculator-pro.htm#calc">PowerLite 2247U</option> <option value="Epson-PowerLite_2250U-projection-calculator-pro.htm#calc">PowerLite 2250U</option> <option value="Epson-PowerLite_2255U-projection-calculator-pro.htm#calc">PowerLite 2255U</option> <option value="Epson-PowerLite_520-projection-calculator-pro.htm#calc">PowerLite 520</option> <option value="Epson-PowerLite_530-projection-calculator-pro.htm#calc">PowerLite 530</option> <option value="Epson-PowerLite_685W-projection-calculator-pro.htm#calc">PowerLite 685W</option> <option value="Epson-PowerLite_720-projection-calculator-pro.htm#calc">PowerLite 720</option> <option value="Epson-PowerLite_725W-projection-calculator-pro.htm#calc">PowerLite 725W</option> <option value="Epson-PowerLite_750F-projection-calculator-pro.htm#calc">PowerLite 750F</option> <option value="Epson-PowerLite_755F-projection-calculator-pro.htm#calc">PowerLite 755F</option> <option value="Epson-PowerLite_800F-projection-calculator-pro.htm#calc">PowerLite 800F</option> <option value="Epson-PowerLite_805F-projection-calculator-pro.htm#calc">PowerLite 805F</option> <option value="Epson-PowerLite_982W-projection-calculator-pro.htm#calc">PowerLite 982W</option> <option value="Epson-PowerLite_992F-projection-calculator-pro.htm#calc">PowerLite 992F</option> <option value="Epson-PowerLite_E20-projection-calculator-pro.htm#calc">PowerLite E20</option> <option value="Epson-PowerLite_L200SW-projection-calculator-pro.htm#calc">PowerLite L200SW</option> <option value="Epson-PowerLite_L200SX-projection-calculator-pro.htm#calc">PowerLite L200SX</option> <option value="Epson-PowerLite_L200W-projection-calculator-pro.htm#calc">PowerLite L200W</option> <option value="Epson-PowerLite_L200X-projection-calculator-pro.htm#calc">PowerLite L200X</option> <option value="Epson-PowerLite_L250F-projection-calculator-pro.htm#calc">PowerLite L250F</option> <option value="Epson-PowerLite_L255F-projection-calculator-pro.htm#calc">PowerLite L255F</option> <option value="Epson-PowerLite_L520U-projection-calculator-pro.htm#calc">PowerLite L520U</option> <option value="Epson-PowerLite_L520W-projection-calculator-pro.htm#calc">PowerLite L520W</option> <option value="Epson-PowerLite_L530U-projection-calculator-pro.htm#calc">PowerLite L530U</option> <option value="Epson-PowerLite_L630SU-projection-calculator-pro.htm#calc">PowerLite L630SU</option> <option value="Epson-PowerLite_L630U-projection-calculator-pro.htm#calc">PowerLite L630U</option> <option value="Epson-PowerLite_L635SU-projection-calculator-pro.htm#calc">PowerLite L635SU</option> <option value="Epson-PowerLite_L730U-projection-calculator-pro.htm#calc">PowerLite L730U</option> <option value="Epson-PowerLite_L735U-projection-calculator-pro.htm#calc">PowerLite L735U</option> <option value="Epson-PowerLite_U50-projection-calculator-pro.htm#calc">PowerLite U50</option> <option value="Epson-PowerLite_W49-projection-calculator-pro.htm#calc">PowerLite W49</option> <option value="Epson-PowerLite_W70-projection-calculator-pro.htm#calc">PowerLite W70</option> <option value="Epson-PowerLite_W75-projection-calculator-pro.htm#calc">PowerLite W75</option> <option value="Epson-PowerLite_X49-projection-calculator-pro.htm#calc">PowerLite X49</option> <option value="Epson-Pro_Cinema_4050-projection-calculator-pro.htm#calc">Pro Cinema 4050</option> <option value="Epson-Pro_Cinema_6050UB-projection-calculator-pro.htm#calc">Pro Cinema 6050UB</option> <option value="Epson-Pro_EX10000-projection-calculator-pro.htm#calc">Pro EX10000</option> <option value="Epson-Pro_EX7280-projection-calculator-pro.htm#calc">Pro EX7280</option> <option value="Epson-Pro_EX9210-projection-calculator-pro.htm#calc">Pro EX9210</option> <option value="Epson-Pro_EX9220-projection-calculator-pro.htm#calc">Pro EX9220</option> <option value="Epson-Pro_EX9240-projection-calculator-pro.htm#calc">Pro EX9240</option> <option value="Epson-Pro_G7400U-projection-calculator-pro.htm#calc">Pro G7400U</option> <option value="Epson-Pro_L1060UNL-projection-calculator-pro.htm#calc">Pro L1060UNL</option> <option value="Epson-Pro_L1060W-projection-calculator-pro.htm#calc">Pro L1060W</option> <option value="Epson-Pro_L1060WNL-projection-calculator-pro.htm#calc">Pro L1060WNL</option> <option value="Epson-Pro_L12000QNL-projection-calculator-pro.htm#calc">Pro L12000QNL</option> <option value="Epson-Pro_L12002QNL-projection-calculator-pro.htm#calc">Pro L12002QNL</option> <option value="Epson-Pro_L1490UNL-projection-calculator-pro.htm#calc">Pro L1490UNL</option> <option value="Epson-Pro_L1495UNL-projection-calculator-pro.htm#calc">Pro L1495UNL</option> <option value="Epson-Pro_L1500UHNL-projection-calculator-pro.htm#calc">Pro L1500UHNL</option> <option value="Epson-Pro_L1505UHNL-projection-calculator-pro.htm#calc">Pro L1505UHNL</option> <option value="Epson-Pro_L1715SNL-projection-calculator-pro.htm#calc">Pro L1715SNL</option> <option value="Epson-Pro_L1750UNL-projection-calculator-pro.htm#calc">Pro L1750UNL</option> <option value="Epson-Pro_L1755UNL-projection-calculator-pro.htm#calc">Pro L1755UNL</option> <option value="Epson-Pro_L20000UNL-projection-calculator-pro.htm#calc">Pro L20000UNL</option> <option value="Epson-Pro_L20002UNL-projection-calculator-pro.htm#calc">Pro L20002UNL</option> <option value="Epson-Pro_L30000U-projection-calculator-pro.htm#calc">Pro L30000UNL</option> <option value="Epson-Pro_L30002UNL-projection-calculator-pro.htm#calc">Pro L30002UNL</option> <option value="Epson-VS250-projection-calculator-pro.htm#calc">VS250</option> <option value="Epson-VS260-projection-calculator-pro.htm#calc">VS260</option> </optgroup> <optgroup label="Discontinued Projectors"> <option value="Epson-BrightLink_436Wi-projection-calculator-pro.htm#calc">BrightLink 436Wi *</option> <option value="Epson-BrightLink_450Wi-projection-calculator-pro.htm#calc">BrightLink 450Wi *</option> <option value="Epson-BrightLink_450WiRM-projection-calculator-pro.htm#calc">BrightLink 450WiRM *</option> <option value="Epson-BrightLink_455Wi-projection-calculator-pro.htm#calc">BrightLink 455Wi *</option> <option value="Epson-BrightLink_455Wi-T-projection-calculator-pro.htm#calc">BrightLink 455Wi-T *</option> <option value="Epson-BrightLink_455Wi-T_RM-projection-calculator-pro.htm#calc">BrightLink 455Wi-T RM *</option> <option value="Epson-BrightLink_455Wi-V-projection-calculator-pro.htm#calc">BrightLink 455Wi-V *</option> <option value="Epson-BrightLink_455Wi-V_RM-projection-calculator-pro.htm#calc">BrightLink 455Wi-V RM *</option> <option value="Epson-BrightLink_455WiRM-projection-calculator-pro.htm#calc">BrightLink 455WiRM *</option> <option value="Epson-BrightLink_475Wi-projection-calculator-pro.htm#calc">BrightLink 475Wi + Wall Mount *</option> <option value="Epson-BrightLink_480i-projection-calculator-pro.htm#calc">BrightLink 480i *</option> <option value="Epson-BrightLink_485Wi-projection-calculator-pro.htm#calc">BrightLink 485Wi *</option> <option value="Epson-BrightLink_536Wi-projection-calculator-pro.htm#calc">BrightLink 536Wi *</option> <option value="Epson-PowerLite_575Wi-projection-calculator-pro.htm#calc">BrightLink 575Wi *</option> <option value="Epson-PowerLite_585Wi-projection-calculator-pro.htm#calc">BrightLink 585Wi *</option> <option value="Epson-BrightLink_595Wi-projection-calculator-pro.htm#calc">BrightLink 595Wi *</option> <option value="Epson-BrightLink_685Wi-projection-calculator-pro.htm#calc">BrightLink 685Wi *</option> <option value="Epson-BrightLink_695Wi-projection-calculator-pro.htm#calc">BrightLink 695Wi *</option> <option value="Epson-BrightLink_696Ui-projection-calculator-pro.htm#calc">BrightLink 696Ui *</option> <option value="Epson-BrightLink_697Ui-projection-calculator-pro.htm#calc">BrightLink 697Ui *</option> <option value="Epson-BrightLink_710Ui-projection-calculator-pro.htm#calc">BrightLink 710Ui *</option> <option value="Epson-BrightLink_Pro_1410Wi-projection-calculator-pro.htm#calc">BrightLink Pro 1410Wi *</option> <option value="Epson-BrightLink_Pro_1410Wi_+_Table_Mount-projection-calculator-pro.htm#calc">BrightLink Pro 1410Wi + Table Mount *</option> <option value="Epson-BrightLink_Pro_1410Wi_+_Wall_Mount-projection-calculator-pro.htm#calc">BrightLink Pro 1410Wi + Wall Mount *</option> <option value="Epson-BrightLink_Pro_1420Wi-projection-calculator-pro.htm#calc">BrightLink Pro 1420Wi *</option> <option value="Epson-BrightLink_Pro_1420Wi_+_Table_Mount-projection-calculator-pro.htm#calc">BrightLink Pro 1420Wi + Table Mount *</option> <option value="Epson-BrightLink_Pro_1420Wiv+_Wall_Mount-projection-calculator-pro.htm#calc">BrightLink Pro 1420Wi+ Wall Mount *</option> <option value="Epson-BrightLink_Pro_1430Wi-projection-calculator-pro.htm#calc">BrightLink Pro 1430Wi *</option> <option value="Epson-BrightLink_Pro_1430Wi_+_Wall_Mount-projection-calculator-pro.htm#calc">BrightLink Pro 1430Wi + Wall Mount *</option> <option value="Epson-BrightLink_Pro_1450Ui-projection-calculator-pro.htm#calc">BrightLink Pro 1450Ui *</option> <option value="Epson-BrightLink_Pro_1450Ui_+_Wall_Mount-projection-calculator-pro.htm#calc">BrightLink Pro 1450Ui + Mount *</option> <option value="Epson-BrightLink_Pro_1460Ui-projection-calculator-pro.htm#calc">BrightLink Pro 1460Ui *</option> <option value="Epson-BrightLink_Pro_1460Ui_+_Wall_Mount-projection-calculator-pro.htm#calc">BrightLink Pro 1460Ui + Mount *</option> <option value="Epson-BrightLink_Pro_1470Ui-projection-calculator-pro.htm#calc">BrightLink Pro 1470Ui *</option> <option value="Epson-BrightLink_Pro_1470Ui_+_Wall_Mount-projection-calculator-pro.htm#calc">BrightLink Pro 1470Ui + Mount *</option> <option value="Epson-ELP-3000-projection-calculator-pro.htm#calc">ELP-3000 *</option> <option value="Epson-ELP-3300-projection-calculator-pro.htm#calc">ELP-3300 *</option> <option value="Epson-ELP-3500-projection-calculator-pro.htm#calc">ELP-3500 *</option> <option value="Epson-Ensemble_HD_1080-projection-calculator-pro.htm#calc">Ensemble HD 1080 *</option> <option value="Epson-Ensemble_HD_8100-projection-calculator-pro.htm#calc">Ensemble HD 8100 *</option> <option value="Epson-Ensemble_HD_8500-projection-calculator-pro.htm#calc">Ensemble HD 8500 *</option> <option value="Epson-Ensemble_HD_Home_Cinema_6100-projection-calculator-pro.htm#calc">Ensemble HD Home Cinema 6100 *</option> <option value="Epson-Ensemble_HD_Home_Cinema_6500-projection-calculator-pro.htm#calc">Ensemble HD Home Cinema 6500 *</option> <option value="Epson-Ensemble_HD-720-projection-calculator-pro.htm#calc">Ensemble HD-720 *</option> <option value="Epson-EX100-projection-calculator-pro.htm#calc">EX100 *</option> <option value="Epson-EX21-projection-calculator-pro.htm#calc">EX21 *</option> <option value="Epson-EX30-projection-calculator-pro.htm#calc">EX30 *</option> <option value="Epson-EX31-projection-calculator-pro.htm#calc">EX31 *</option> <option value="Epson-EX31B-projection-calculator-pro.htm#calc">EX31B *</option> <option value="Epson-EX3200-projection-calculator-pro.htm#calc">EX3200 *</option> <option value="Epson-EX3220-projection-calculator-pro.htm#calc">EX3220 *</option> <option value="Epson-EX3240-projection-calculator-pro.htm#calc">EX3240 *</option> <option value="Epson-EX3260-projection-calculator-pro.htm#calc">EX3260 *</option> <option value="Epson-EX50-projection-calculator-pro.htm#calc">EX50 *</option> <option value="Epson-EX51-projection-calculator-pro.htm#calc">EX51 *</option> <option value="Epson-EX5200-projection-calculator-pro.htm#calc">EX5200 *</option> <option value="Epson-EX5210-projection-calculator-pro.htm#calc">EX5210 *</option> <option value="Epson-EX5220-projection-calculator-pro.htm#calc">EX5220 *</option> <option value="Epson-EX5230_Pro-projection-calculator-pro.htm#calc">EX5230 Pro *</option> <option value="Epson-EX5240-projection-calculator-pro.htm#calc">EX5240 *</option> <option value="Epson-EX5250_Pro-projection-calculator-pro.htm#calc">EX5250 Pro *</option> <option value="Epson-EX6210-projection-calculator-pro.htm#calc">EX6210 *</option> <option value="Epson-EX6220-projection-calculator-pro.htm#calc">EX6220 *</option> <option value="Epson-EX70-projection-calculator-pro.htm#calc">EX70 *</option> <option value="Epson-EX71-projection-calculator-pro.htm#calc">EX71 *</option> <option value="Epson-EX7200-projection-calculator-pro.htm#calc">EX7200 *</option> <option value="Epson-EX7210-projection-calculator-pro.htm#calc">EX7210 *</option> <option value="Epson-EX7220-projection-calculator-pro.htm#calc">EX7220 *</option> <option value="Epson-EX7230_Pro-projection-calculator-pro.htm#calc">EX7230 Pro *</option> <option value="Epson-EX7235_Pro-projection-calculator-pro.htm#calc">EX7235 Pro *</option> <option value="Epson-EX7240_Pro-projection-calculator-pro.htm#calc">EX7240 *</option> <option value="Epson-EX90-projection-calculator-pro.htm#calc">EX90 *</option> <option value="Epson-EX9200_Pro-projection-calculator-pro.htm#calc">EX9200 Pro *</option> <option value="Epson-PowerLite_Home_Cinema_1040-projection-calculator-pro.htm#calc">Home Cinema 1040 *</option> <option value="Epson-Home_Cinema_1060-projection-calculator-pro.htm#calc">Home Cinema 1060 *</option> <option value="Epson-Home_Cinema_1440-projection-calculator-pro.htm#calc">Home Cinema 1440 *</option> <option value="Epson-Home_Cinema_1450-projection-calculator-pro.htm#calc">Home Cinema 1450 *</option> <option value="Epson-PowerLite_Home_Cinema_2000-projection-calculator-pro.htm#calc">Home Cinema 2000 *</option> <option value="Epson-PowerLite_Home_Cinema_2030-projection-calculator-pro.htm#calc">Home Cinema 2030 *</option> <option value="Epson-PowerLite_Home_Cinema_2040-projection-calculator-pro.htm#calc">Home Cinema 2040 *</option> <option value="Epson-PowerLite_Home_Cinema_2045-projection-calculator-pro.htm#calc">Home Cinema 2045 *</option> <option value="Epson-Home_Cinema_2100-projection-calculator-pro.htm#calc">Home Cinema 2100 *</option> <option value="Epson-Home_Cinema_2150-projection-calculator-pro.htm#calc">Home Cinema 2150 *</option> <option value="Epson-PowerLite_Home_Cinema_3000-projection-calculator-pro.htm#calc">Home Cinema 3000 *</option> <option value="Epson-PowerLite_Home_Cinema_3020-projection-calculator-pro.htm#calc">Home Cinema 3020 *</option> <option value="Epson-PowerLite_Home_Cinema_3100-projection-calculator-pro.htm#calc">Home Cinema 3100 *</option> <option value="Epson-Home_Cinema_3500-projection-calculator-pro.htm#calc">Home Cinema 3500 *</option> <option value="Epson-Home_Cinema_3600e-projection-calculator-pro.htm#calc">Home Cinema 3600e *</option> <option value="Epson-PowerLite_Home_Cinema_3700-projection-calculator-pro.htm#calc">Home Cinema 3700 *</option> <option value="Epson-PowerLite_Home_Cinema_3900-projection-calculator-pro.htm#calc">Home Cinema 3900 *</option> <option value="Epson-Home_Cinema_4000-projection-calculator-pro.htm#calc">Home Cinema 4000 *</option> <option value="Epson-PowerLite_Home_Cinema_5025UB-projection-calculator-pro.htm#calc">Home Cinema 5025UB *</option> <option value="Epson-PowerLite_Home_Cinema_5030UB-projection-calculator-pro.htm#calc">Home Cinema 5030UB *</option> <option value="Epson-PowerLite_Home_Cinema_5030UBe-projection-calculator-pro.htm#calc">Home Cinema 5030UBe *</option> <option value="Epson-Home_Cinema_5040UB-projection-calculator-pro.htm#calc">Home Cinema 5040UB *</option> <option value="Epson-PowerLite_Home_Cinema_5040UBe-projection-calculator-pro.htm#calc">Home Cinema 5040UBe *</option> <option value="Epson-PowerLite_Home_Cinema_600-projection-calculator-pro.htm#calc">Home Cinema 600 *</option> <option value="Epson-PowerLite_Home_Cinema_640-projection-calculator-pro.htm#calc">Home Cinema 640 *</option> <option value="Epson-Home_Cinema_660-projection-calculator-pro.htm#calc">Home Cinema 660 *</option> <option value="Epson-PowerLite_Home_Cinema_740HD-projection-calculator-pro.htm#calc">Home Cinema 740HD *</option> <option value="Epson-PowerLite_Home_Cinema_750HD-projection-calculator-pro.htm#calc">Home Cinema 750HD *</option> <option value="Epson-Home_Cinema_760HD-projection-calculator-pro.htm#calc">Home Cinema 760 *</option> <option value="Epson-Home_Cinema_LS100-projection-calculator-pro.htm#calc">Home Cinema LS100 *</option> <option value="Epson-LightScene_EV-100-projection-calculator-pro.htm#calc">LightScene EV-100 *</option> <option value="Epson-LightScene_EV-105-projection-calculator-pro.htm#calc">LightScene EV-105 *</option> <option value="Epson-MegaPlex_MG-850HD-projection-calculator-pro.htm#calc">MegaPlex MG-850HD *</option> <option value="Epson-MovieMate_25-projection-calculator-pro.htm#calc">MovieMate 25 *</option> <option value="Epson-MovieMate_30s-projection-calculator-pro.htm#calc">MovieMate 30s *</option> <option value="Epson-MovieMate_33s-projection-calculator-pro.htm#calc">MovieMate 33s *</option> <option value="Epson-MovieMate_50-projection-calculator-pro.htm#calc">MovieMate 50 *</option> <option value="Epson-MovieMate_55-projection-calculator-pro.htm#calc">MovieMate 55 *</option> <option value="Epson-MovieMate_72-projection-calculator-pro.htm#calc">MovieMate 72 *</option> <option value="Epson-MovieMate_85HD-projection-calculator-pro.htm#calc">MovieMate 85HD *</option> <option value="Epson-PowerLite_107-projection-calculator-pro.htm#calc">PowerLite 107 *</option> <option value="Epson-PowerLite_108-projection-calculator-pro.htm#calc">PowerLite 108 *</option> <option value="Epson-PowerLite_109W-projection-calculator-pro.htm#calc">PowerLite 109W *</option> <option value="Epson-PowerLite_1220-projection-calculator-pro.htm#calc">PowerLite 1220 *</option> <option value="Epson-PowerLite_1221-projection-calculator-pro.htm#calc">PowerLite 1221 *</option> <option value="Epson-PowerLite_1222-projection-calculator-pro.htm#calc">PowerLite 1222 *</option> <option value="Epson-PowerLite_1224-projection-calculator-pro.htm#calc">PowerLite 1224 *</option> <option value="Epson-PowerLite_1260-projection-calculator-pro.htm#calc">PowerLite 1260 *</option> <option value="Epson-PowerLite_1261W-projection-calculator-pro.htm#calc">PowerLite 1261W *</option> <option value="Epson-PowerLite_1262W-projection-calculator-pro.htm#calc">PowerLite 1262W *</option> <option value="Epson-PowerLite_1263W-projection-calculator-pro.htm#calc">PowerLite 1263W *</option> <option value="Epson-PowerLite_1264-projection-calculator-pro.htm#calc">PowerLite 1264 *</option> <option value="Epson-PowerLite_1266-projection-calculator-pro.htm#calc">PowerLite 1266 *</option> <option value="Epson-PowerLite_1284-projection-calculator-pro.htm#calc">PowerLite 1284 *</option> <option value="Epson-PowerLite_1286-projection-calculator-pro.htm#calc">PowerLite 1286 *</option> <option value="Epson-PowerLite_1700c-projection-calculator-pro.htm#calc">PowerLite 1700c *</option> <option value="Epson-PowerLite_1705c-projection-calculator-pro.htm#calc">PowerLite 1705c *</option> <option value="Epson-PowerLite_1710c-projection-calculator-pro.htm#calc">PowerLite 1710c *</option> <option value="Epson-PowerLite_1715c-projection-calculator-pro.htm#calc">PowerLite 1715c *</option> <option value="Epson-PowerLite_1716-projection-calculator-pro.htm#calc">PowerLite 1716 *</option> <option value="Epson-PowerLite_1720-projection-calculator-pro.htm#calc">PowerLite 1720 *</option> <option value="Epson-PowerLite_1725-projection-calculator-pro.htm#calc">PowerLite 1725 *</option> <option value="Epson-PowerLite_1730W-projection-calculator-pro.htm#calc">PowerLite 1730W *</option> <option value="Epson-PowerLite_1735W-projection-calculator-pro.htm#calc">PowerLite 1735W *</option> <option value="Epson-PowerLite_1750-projection-calculator-pro.htm#calc">PowerLite 1750 *</option> <option value="Epson-PowerLite_1751-projection-calculator-pro.htm#calc">PowerLite 1751 *</option> <option value="Epson-PowerLite_1760W-projection-calculator-pro.htm#calc">PowerLite 1760W *</option> <option value="Epson-PowerLite_1761W-projection-calculator-pro.htm#calc">PowerLite 1761W *</option> <option value="Epson-PowerLite_1770W-projection-calculator-pro.htm#calc">PowerLite 1770W *</option> <option value="Epson-PowerLite_1771W-projection-calculator-pro.htm#calc">PowerLite 1771W *</option> <option value="Epson-PowerLite_1775W-projection-calculator-pro.htm#calc">PowerLite 1775W *</option> <option value="Epson-PowerLite_1776W-projection-calculator-pro.htm#calc">PowerLite 1776W *</option> <option value="Epson-PowerLite_1810p-projection-calculator-pro.htm#calc">PowerLite 1810p *</option> <option value="Epson-PowerLite_1815p-projection-calculator-pro.htm#calc">PowerLite 1815p *</option> <option value="Epson-PowerLite_1825-projection-calculator-pro.htm#calc">PowerLite 1825 *</option> <option value="Epson-PowerLite_1830-projection-calculator-pro.htm#calc">PowerLite 1830 *</option> <option value="Epson-PowerLite_1835-projection-calculator-pro.htm#calc">PowerLite 1835 *</option> <option value="Epson-PowerLite_1850W-projection-calculator-pro.htm#calc">PowerLite 1850W *</option> <option value="Epson-PowerLite_1880-projection-calculator-pro.htm#calc">PowerLite 1880 *</option> <option value="Epson-PowerLite_1915-projection-calculator-pro.htm#calc">PowerLite 1915 *</option> <option value="Epson-PowerLite_1925W-projection-calculator-pro.htm#calc">PowerLite 1925W *</option> <option value="Epson-PowerLite_1930-projection-calculator-pro.htm#calc">PowerLite 1930 *</option> <option value="Epson-PowerLite_1940W-projection-calculator-pro.htm#calc">PowerLite 1940W *</option> <option value="Epson-PowerLite_1945W-projection-calculator-pro.htm#calc">PowerLite 1945W *</option> <option value="Epson-PowerLite_1950-projection-calculator-pro.htm#calc">PowerLite 1950 *</option> <option value="Epson-PowerLite_1955-projection-calculator-pro.htm#calc">PowerLite 1955 *</option> <option value="Epson-PowerLite_1960-projection-calculator-pro.htm#calc">PowerLite 1960 *</option> <option value="Epson-PowerLite_1965-projection-calculator-pro.htm#calc">PowerLite 1965 *</option> <option value="Epson-PowerLite_1975W-projection-calculator-pro.htm#calc">PowerLite 1975W *</option> <option value="Epson-PowerLite_1980WU-projection-calculator-pro.htm#calc">PowerLite 1980WU *</option> <option value="Epson-PowerLite_1985WU-projection-calculator-pro.htm#calc">PowerLite 1985WU *</option> <option value="Epson-PowerLite_2040-projection-calculator-pro.htm#calc">PowerLite 2040 *</option> <option value="Epson-PowerLite_2042-projection-calculator-pro.htm#calc">PowerLite 2042 *</option> <option value="Epson-PowerLite_2140W-projection-calculator-pro.htm#calc">PowerLite 2140W *</option> <option value="Epson-PowerLite_2155W-projection-calculator-pro.htm#calc">PowerLite 2155W *</option> <option value="Epson-PowerLite_2165W-projection-calculator-pro.htm#calc">PowerLite 2165W *</option> <option value="Epson-PowerLite_2245U-projection-calculator-pro.htm#calc">PowerLite 2245U *</option> <option value="Epson-PowerLite_2265U-projection-calculator-pro.htm#calc">PowerLite 2265U *</option> <option value="Epson-PowerLite_30c-projection-calculator-pro.htm#calc">PowerLite 30c *</option> <option value="Epson-PowerLite_400W-projection-calculator-pro.htm#calc">PowerLite 400W *</option> <option value="Epson-PowerLite_4100-projection-calculator-pro.htm#calc">PowerLite 4100 *</option> <option value="Epson-PowerLite_4200W-projection-calculator-pro.htm#calc">PowerLite 4200W *</option> <option value="Epson-PowerLite_4300-projection-calculator-pro.htm#calc">PowerLite 4300 *</option> <option value="Epson-PowerLite_450W-projection-calculator-pro.htm#calc">PowerLite 450W *</option> <option value="Epson-PowerLite_460-projection-calculator-pro.htm#calc">PowerLite 460 *</option> <option value="Epson-PowerLite_4650-projection-calculator-pro.htm#calc">PowerLite 4650 *</option> <option value="Epson-PowerLite_470-projection-calculator-pro.htm#calc">PowerLite 470 *</option> <option value="Epson-PowerLite_4750W-projection-calculator-pro.htm#calc">PowerLite 4750W *</option> <option value="Epson-PowerLite_475W-projection-calculator-pro.htm#calc">PowerLite 475W *</option> <option value="Epson-PowerLite_4770W-projection-calculator-pro.htm#calc">PowerLite 4770W *</option> <option value="Epson-PowerLite_480-projection-calculator-pro.htm#calc">PowerLite 480 *</option> <option value="Epson-PowerLite_4855WU-projection-calculator-pro.htm#calc">PowerLite 4855WU *</option> <option value="Epson-PowerLite_485W-projection-calculator-pro.htm#calc">PowerLite 485W *</option> <option value="Epson-PowerLite_5000-projection-calculator-pro.htm#calc">PowerLite 5000 *</option> <option value="Epson-PowerLite_5000XB-projection-calculator-pro.htm#calc">PowerLite 5000XB *</option> <option value="Epson-PowerLite_500c-projection-calculator-pro.htm#calc">PowerLite 500c *</option> <option value="Epson-PowerLite_505c-projection-calculator-pro.htm#calc">PowerLite 505c *</option> <option value="Epson-PowerLite_50c-projection-calculator-pro.htm#calc">PowerLite 50c *</option> <option value="Epson-PowerLite_51c-projection-calculator-pro.htm#calc">PowerLite 51c *</option> <option value="Epson-PowerLite_525W-projection-calculator-pro.htm#calc">PowerLite 525W *</option> <option value="Epson-PowerLite_530_SMART-projection-calculator-pro.htm#calc">PowerLite 530 SMART *</option> <option value="Epson-PowerLite_5300-projection-calculator-pro.htm#calc">PowerLite 5300 *</option> <option value="Epson-PowerLite_5350-projection-calculator-pro.htm#calc">PowerLite 5350 *</option> <option value="Epson-PowerLite_535W-projection-calculator-pro.htm#calc">PowerLite 535W *</option> <option value="Epson-PowerLite_53c-projection-calculator-pro.htm#calc">PowerLite 53c *</option> <option value="Epson-PowerLite_54c-projection-calculator-pro.htm#calc">PowerLite 54c *</option> <option value="Epson-PowerLite_5500C-projection-calculator-pro.htm#calc">PowerLite 5500C *</option> <option value="Epson-PowerLite_5510-projection-calculator-pro.htm#calc">PowerLite 5510 *</option> <option value="Epson-PowerLite_5520W-projection-calculator-pro.htm#calc">PowerLite 5520W *</option> <option value="Epson-PowerLite_5530U-projection-calculator-pro.htm#calc">PowerLite 5530U *</option> <option value="Epson-PowerLite_5535U-projection-calculator-pro.htm#calc">PowerLite 5535U *</option> <option value="Epson-PowerLite_5550C-projection-calculator-pro.htm#calc">PowerLite 5550C *</option> <option value="Epson-PowerLite_5600p-projection-calculator-pro.htm#calc">PowerLite 5600p *</option> <option value="Epson-PowerLite_570-projection-calculator-pro.htm#calc">PowerLite 570 *</option> <option value="Epson-PowerLite_575W-projection-calculator-pro.htm#calc">PowerLite 575W *</option> <option value="Epson-PowerLite_580-projection-calculator-pro.htm#calc">PowerLite 580 *</option> <option value="Epson-PowerLite_580_SMART-projection-calculator-pro.htm#calc">PowerLite 580 SMART *</option> <option value="Epson-PowerLite_585W-projection-calculator-pro.htm#calc">PowerLite 585W *</option> <option value="Epson-PowerLite_585W_SMART-projection-calculator-pro.htm#calc">PowerLite 585W SMART *</option> <option value="Epson-PowerLite_600P-projection-calculator-pro.htm#calc">PowerLite 600P *</option> <option value="Epson-PowerLite_6100i-projection-calculator-pro.htm#calc">PowerLite 6100i *</option> <option value="Epson-PowerLite_6110i-projection-calculator-pro.htm#calc">PowerLite 6110i *</option> <option value="Epson-PowerLite_61p-projection-calculator-pro.htm#calc">PowerLite 61p *</option> <option value="Epson-PowerLite_62c-projection-calculator-pro.htm#calc">PowerLite 62c *</option> <option value="Epson-PowerLite_675W-projection-calculator-pro.htm#calc">PowerLite 675W *</option> <option value="Epson-PowerLite_680-projection-calculator-pro.htm#calc">PowerLite 680 *</option> <option value="Epson-PowerLite_680_SMART-projection-calculator-pro.htm#calc">PowerLite 680 SMART *</option> <option value="Epson-PowerLite_685W_SMART-projection-calculator-pro.htm#calc">PowerLite 685W SMART *</option> <option value="Epson-PowerLite_7000-projection-calculator-pro.htm#calc">PowerLite 7000 *</option> <option value="Epson-PowerLite_7000XB-projection-calculator-pro.htm#calc">PowerLite 7000XB *</option> <option value="Epson-PowerLite_700c-projection-calculator-pro.htm#calc">PowerLite 700c *</option> <option value="Epson-PowerLite_700U-projection-calculator-pro.htm#calc">PowerLite 700U *</option> <option value="Epson-PowerLite_70c-projection-calculator-pro.htm#calc">PowerLite 70c *</option> <option value="Epson-PowerLite_710c-projection-calculator-pro.htm#calc">PowerLite 710c *</option> <option value="Epson-PowerLite_715c-projection-calculator-pro.htm#calc">PowerLite 715c *</option> <option value="Epson-PowerLite_71c-projection-calculator-pro.htm#calc">PowerLite 71c *</option> <option value="Epson-PowerLite_7200-projection-calculator-pro.htm#calc">PowerLite 7200 *</option> <option value="Epson-PowerLite_720c-projection-calculator-pro.htm#calc">PowerLite 720c *</option> <option value="Epson-PowerLite_7300-projection-calculator-pro.htm#calc">PowerLite 7300 *</option> <option value="Epson-PowerLite_730c-projection-calculator-pro.htm#calc">PowerLite 730c *</option> <option value="Epson-PowerLite_732c-projection-calculator-pro.htm#calc">PowerLite 732c *</option> <option value="Epson-PowerLite_735c-projection-calculator-pro.htm#calc">PowerLite 735c *</option> <option value="Epson-PowerLite_737c-projection-calculator-pro.htm#calc">PowerLite 737c *</option> <option value="Epson-PowerLite_73c-projection-calculator-pro.htm#calc">PowerLite 73c *</option> <option value="Epson-PowerLite_740c-projection-calculator-pro.htm#calc">PowerLite 740c *</option> <option value="Epson-PowerLite_745c-projection-calculator-pro.htm#calc">PowerLite 745c *</option> <option value="Epson-PowerLite_74c-projection-calculator-pro.htm#calc">PowerLite 74c *</option> <option value="Epson-PowerLite_7500C-projection-calculator-pro.htm#calc">PowerLite 7500C *</option> <option value="Epson-PowerLite_750c-projection-calculator-pro.htm#calc">PowerLite 750c *</option> <option value="Epson-PowerLite_755c-projection-calculator-pro.htm#calc">PowerLite 755c *</option> <option value="Epson-PowerLite_7600p-projection-calculator-pro.htm#calc">PowerLite 7600p *</option> <option value="Epson-PowerLite_760c-projection-calculator-pro.htm#calc">PowerLite 760c *</option> <option value="Epson-PowerLite_765c-projection-calculator-pro.htm#calc">PowerLite 765c *</option> <option value="Epson-PowerLite_76c-projection-calculator-pro.htm#calc">PowerLite 76c *</option> <option value="Epson-PowerLite_7700p-projection-calculator-pro.htm#calc">PowerLite 7700p *</option> <option value="Epson-PowerLite_77c-projection-calculator-pro.htm#calc">PowerLite 77c *</option> <option value="Epson-PowerLite_78-projection-calculator-pro.htm#calc">PowerLite 78 *</option> <option value="Epson-PowerLite_7800p-projection-calculator-pro.htm#calc">PowerLite 7800p *</option> <option value="Epson-PowerLite_7850p-projection-calculator-pro.htm#calc">PowerLite 7850p *</option> <option value="Epson-PowerLite_7850pNL-projection-calculator-pro.htm#calc">PowerLite 7850pNL *</option> <option value="Epson-PowerLite_7900p_NL-projection-calculator-pro.htm#calc">PowerLite 7900p NL *</option> <option value="Epson-PowerLite_8000i-projection-calculator-pro.htm#calc">PowerLite 8000i *</option> <option value="Epson-PowerLite_800P-projection-calculator-pro.htm#calc">PowerLite 800P *</option> <option value="Epson-PowerLite_8100i+NL-projection-calculator-pro.htm#calc">PowerLite 8100i+NL *</option> <option value="Epson-PowerLite_810P-projection-calculator-pro.htm#calc">PowerLite 810P *</option> <option value="Epson-PowerLite_811p-projection-calculator-pro.htm#calc">PowerLite 811p *</option> <option value="Epson-PowerLite_81p-projection-calculator-pro.htm#calc">PowerLite 81p *</option> <option value="Epson-PowerLite_8200i-projection-calculator-pro.htm#calc">PowerLite 8200i *</option> <option value="Epson-PowerLite_820p-projection-calculator-pro.htm#calc">PowerLite 820p *</option> <option value="Epson-PowerLite_821p-projection-calculator-pro.htm#calc">PowerLite 821p *</option> <option value="Epson-PowerLite_822+-projection-calculator-pro.htm#calc">PowerLite 822+ *</option> <option value="Epson-PowerLite_822p-projection-calculator-pro.htm#calc">PowerLite 822p *</option> <option value="Epson-PowerLite_825-projection-calculator-pro.htm#calc">PowerLite 825 *</option> <option value="Epson-PowerLite_825+-projection-calculator-pro.htm#calc">PowerLite 825+ *</option> <option value="Epson-PowerLite_826W-projection-calculator-pro.htm#calc">PowerLite 826W *</option> <option value="Epson-PowerLite_826W+-projection-calculator-pro.htm#calc">PowerLite 826W+ *</option> <option value="Epson-PowerLite_82c-projection-calculator-pro.htm#calc">PowerLite 82c *</option> <option value="Epson-PowerLite_83+-projection-calculator-pro.htm#calc">PowerLite 83+ *</option> <option value="Epson-PowerLite_83+DC-projection-calculator-pro.htm#calc">PowerLite 83+DC *</option> <option value="Epson-PowerLite_8300i-projection-calculator-pro.htm#calc">PowerLite 8300i *</option> <option value="Epson-PowerLite_8300NL-projection-calculator-pro.htm#calc">PowerLite 8300NL *</option> <option value="Epson-PowerLite_830p-projection-calculator-pro.htm#calc">PowerLite 830p *</option> <option value="Epson-PowerLite_835p-projection-calculator-pro.htm#calc">PowerLite 835p *</option> <option value="Epson-PowerLite_83c-projection-calculator-pro.htm#calc">PowerLite 83c *</option> <option value="Epson-PowerLite_83V+-projection-calculator-pro.htm#calc">PowerLite 83V+ *</option> <option value="Epson-PowerLite_84-projection-calculator-pro.htm#calc">PowerLite 84 *</option> <option value="Epson-PowerLite_84+-projection-calculator-pro.htm#calc">PowerLite 84+ *</option> <option value="Epson-PowerLite_85-projection-calculator-pro.htm#calc">PowerLite 85 *</option> <option value="Epson-PowerLite_85+-projection-calculator-pro.htm#calc">PowerLite 85+ *</option> <option value="Epson-PowerLite_9000i-projection-calculator-pro.htm#calc">PowerLite 9000i *</option> <option value="Epson-PowerLite_905-projection-calculator-pro.htm#calc">PowerLite 905 *</option> <option value="Epson-PowerLite_9100i+NL-projection-calculator-pro.htm#calc">PowerLite 9100i+NL *</option> <option value="Epson-PowerLite_915W-projection-calculator-pro.htm#calc">PowerLite 915W *</option> <option value="Epson-PowerLite_92-projection-calculator-pro.htm#calc">PowerLite 92 *</option> <option value="Epson-PowerLite_93-projection-calculator-pro.htm#calc">PowerLite 93 *</option> <option value="Epson-PowerLite_93+-projection-calculator-pro.htm#calc">PowerLite 93+ *</option> <option value="Epson-PowerLite_9300i-projection-calculator-pro.htm#calc">PowerLite 9300i *</option> <option value="Epson-PowerLite_935W-projection-calculator-pro.htm#calc">PowerLite 935W *</option> <option value="Epson-PowerLite_95-projection-calculator-pro.htm#calc">PowerLite 95 *</option> <option value="Epson-PowerLite_955W-projection-calculator-pro.htm#calc">PowerLite 955W *</option> <option value="Epson-PowerLite_955WH-projection-calculator-pro.htm#calc">PowerLite 955WH *</option> <option value="Epson-PowerLite_965-projection-calculator-pro.htm#calc">PowerLite 965 *</option> <option value="Epson-PowerLite_965H-projection-calculator-pro.htm#calc">PowerLite 965H *</option> <option value="Epson-PowerLite_96W-projection-calculator-pro.htm#calc">PowerLite 96W *</option> <option value="Epson-PowerLite_97-projection-calculator-pro.htm#calc">PowerLite 97 *</option> <option value="Epson-PowerLite_970-projection-calculator-pro.htm#calc">PowerLite 970 *</option> <option value="Epson-PowerLite_975W-projection-calculator-pro.htm#calc">PowerLite 975W *</option> <option value="Epson-PowerLite_97H-projection-calculator-pro.htm#calc">PowerLite 97H *</option> <option value="Epson-PowerLite_98-projection-calculator-pro.htm#calc">PowerLite 98 *</option> <option value="Epson-PowerLite_980W-projection-calculator-pro.htm#calc">PowerLite 980W *</option> <option value="Epson-PowerLite_98H-projection-calculator-pro.htm#calc">PowerLite 98H *</option> <option value="Epson-PowerLite_990U-projection-calculator-pro.htm#calc">PowerLite 990U *</option> <option value="Epson-PowerLite_99W-projection-calculator-pro.htm#calc">PowerLite 99W *</option> <option value="Epson-PowerLite_99WH-projection-calculator-pro.htm#calc">PowerLite 99WH *</option> <option value="Epson-PowerLite_Cinema_200-projection-calculator-pro.htm#calc">PowerLite Cinema 200 *</option> <option value="Epson-PowerLite_Cinema_200+-projection-calculator-pro.htm#calc">PowerLite Cinema 200+ *</option> <option value="Epson-PowerLite_Cinema_500-projection-calculator-pro.htm#calc">PowerLite Cinema 500 *</option> <option value="Epson-PowerLite_Cinema_550-projection-calculator-pro.htm#calc">PowerLite Cinema 550 *</option> <option value="Epson-PowerLite_D6150-projection-calculator-pro.htm#calc">PowerLite D6150 *</option> <option value="Epson-PowerLite_D6155W-projection-calculator-pro.htm#calc">PowerLite D6155W *</option> <option value="Epson-PowerLite_D6250-projection-calculator-pro.htm#calc">PowerLite D6250 *</option> <option value="Epson-PowerLite_Pro_G5910-projection-calculator-pro.htm#calc">PowerLite G5910 *</option> <option value="Epson-PowerLite_Home_10-projection-calculator-pro.htm#calc">PowerLite Home 10 *</option> <option value="Epson-PowerLite_Home_10+-projection-calculator-pro.htm#calc">PowerLite Home 10+ *</option> <option value="Epson-PowerLite_Home_20-projection-calculator-pro.htm#calc">PowerLite Home 20 *</option> <option value="Epson-PowerLite_Home_Cinema_1080-projection-calculator-pro.htm#calc">PowerLite Home Cinema 1080 *</option> <option value="Epson-PowerLite_Home_Cinema_1080_UB-projection-calculator-pro.htm#calc">PowerLite Home Cinema 1080 UB *</option> <option value="Epson-PowerLite_Home_Cinema_3010-projection-calculator-pro.htm#calc">PowerLite Home Cinema 3010 *</option> <option value="Epson-PowerLite_Home_Cinema_3010e-projection-calculator-pro.htm#calc">PowerLite Home Cinema 3010e *</option> <option value="Epson-PowerLite_Home_Cinema_3020e-projection-calculator-pro.htm#calc">PowerLite Home Cinema 3020e *</option> <option value="Epson-PowerLite_Home_Cinema_400-projection-calculator-pro.htm#calc">PowerLite Home Cinema 400 *</option> <option value="Epson-PowerLite_Home_Cinema_500_Silver_Edition-projection-calculator-pro.htm#calc">PowerLite Home Cinema 500 Silver Edition *</option> <option value="Epson-PowerLite_Home_Cinema_5010-projection-calculator-pro.htm#calc">PowerLite Home Cinema 5010 *</option> <option value="Epson-PowerLite_Home_Cinema_5010e-projection-calculator-pro.htm#calc">PowerLite Home Cinema 5010e *</option> <option value="Epson-PowerLite_Home_Cinema_5020UB-projection-calculator-pro.htm#calc">PowerLite Home Cinema 5020UB *</option> <option value="Epson-PowerLite_Home_Cinema_5020UBe-projection-calculator-pro.htm#calc">PowerLite Home Cinema 5020UBe *</option> <option value="Epson-PowerLite_Home_Cinema_6100-projection-calculator-pro.htm#calc">PowerLite Home Cinema 6100 *</option> <option value="Epson-PowerLite_Home_Cinema_6500_UB-projection-calculator-pro.htm#calc">PowerLite Home Cinema 6500 UB *</option> <option value="Epson-PowerLite_Home_Cinema_700-projection-calculator-pro.htm#calc">PowerLite Home Cinema 700 *</option> <option value="Epson-PowerLite_Home_Cinema_705HD-projection-calculator-pro.htm#calc">PowerLite Home Cinema 705HD *</option> <option value="Epson-PowerLite_Home_Cinema_707_Gold_Edition-projection-calculator-pro.htm#calc">PowerLite Home Cinema 707 Gold Edition *</option> <option value="Epson-PowerLite_Home_Cinema_710HD-projection-calculator-pro.htm#calc">PowerLite Home Cinema 710HD *</option> <option value="Epson-PowerLite_Home_Cinema_720-projection-calculator-pro.htm#calc">PowerLite Home Cinema 720 *</option> <option value="Epson-PowerLite_Home_Cinema_725HD-projection-calculator-pro.htm#calc">PowerLite Home Cinema 725HD *</option> <option value="Epson-PowerLite_Home_Cinema_730HD-projection-calculator-pro.htm#calc">PowerLite Home Cinema 730HD *</option> <option value="Epson-PowerLite_Home_Cinema_8100-projection-calculator-pro.htm#calc">PowerLite Home Cinema 8100 *</option> <option value="Epson-PowerLite_Home_Cinema_8345-projection-calculator-pro.htm#calc">PowerLite Home Cinema 8345 *</option> <option value="Epson-PowerLite_Home_Cinema_8350-projection-calculator-pro.htm#calc">PowerLite Home Cinema 8350 *</option> <option value="Epson-PowerLite_Home_Cinema_8500UB-projection-calculator-pro.htm#calc">PowerLite Home Cinema 8500UB *</option> <option value="Epson-PowerLite_Home_Cinema_8700_UB-projection-calculator-pro.htm#calc">PowerLite Home Cinema 8700UB *</option> <option value="Epson-PowerLite_L400U-projection-calculator-pro.htm#calc">PowerLite L400U *</option> <option value="Epson-PowerLite_L500W-projection-calculator-pro.htm#calc">PowerLite L500W *</option> <option value="Epson-PowerLite_L510U-projection-calculator-pro.htm#calc">PowerLite L510U *</option> <option value="Epson-PowerLite_L610-projection-calculator-pro.htm#calc">PowerLite L610 *</option> <option value="Epson-PowerLite_L610U-projection-calculator-pro.htm#calc">PowerLite L610U *</option> <option value="Epson-PowerLite_L610W-projection-calculator-pro.htm#calc">PowerLite L610W *</option> <option value="Epson-PowerLite_L615U-projection-calculator-pro.htm#calc">PowerLite L615U *</option> <option value="Epson-PowerLite_Presenter-projection-calculator-pro.htm#calc">PowerLite Presenter *</option> <option value="Epson-PowerLite_Pro_Cinema_1080-projection-calculator-pro.htm#calc">PowerLite Pro Cinema 1080 *</option> <option value="Epson-PowerLite_Pro_Cinema_1080_UB-projection-calculator-pro.htm#calc">PowerLite Pro Cinema 1080 UB *</option> <option value="Epson-PowerLite_Pro_Cinema_6010-projection-calculator-pro.htm#calc">PowerLite Pro Cinema 6010 *</option> <option value="Epson-PowerLite_Pro_Cinema_6020UB-projection-calculator-pro.htm#calc">PowerLite Pro Cinema 6020UB *</option> <option value="Epson-PowerLite_Pro_Cinema_7100-projection-calculator-pro.htm#calc">PowerLite Pro Cinema 7100 *</option> <option value="Epson-PowerLite_Pro_Cinema_7500_UB-projection-calculator-pro.htm#calc">PowerLite Pro Cinema 7500 UB *</option> <option value="Epson-PowerLite_Pro_Cinema_800-projection-calculator-pro.htm#calc">PowerLite Pro Cinema 800 *</option> <option value="Epson-PowerLite_Pro_Cinema_800_HQV-projection-calculator-pro.htm#calc">PowerLite Pro Cinema 800 HQV *</option> <option value="Epson-PowerLite_Pro_Cinema_810-projection-calculator-pro.htm#calc">PowerLite Pro Cinema 810 *</option> <option value="Epson-PowerLite_Pro_Cinema_810_HQV-projection-calculator-pro.htm#calc">PowerLite Pro Cinema 810 HQV *</option> <option value="Epson-PowerLite_Pro_Cinema_9100-projection-calculator-pro.htm#calc">PowerLite Pro Cinema 9100 *</option> <option value="Epson-PowerLite_Pro_Cinema_9350-projection-calculator-pro.htm#calc">PowerLite Pro Cinema 9350 *</option> <option value="Epson-PowerLite_Pro_Cinema_9500_UB-projection-calculator-pro.htm#calc">PowerLite Pro Cinema 9500 UB *</option> <option value="Epson-PowerLite_Pro_Cinema_9700_UB-projection-calculator-pro.htm#calc">PowerLite Pro Cinema 9700 UB *</option> <option value="Epson-PowerLite_Pro_G5000-projection-calculator-pro.htm#calc">PowerLite Pro G5000 *</option> <option value="Epson-PowerLite_Pro_G5150NL-projection-calculator-pro.htm#calc">PowerLite Pro G5150NL *</option> <option value="Epson-PowerLite_Pro_G5200WNL-projection-calculator-pro.htm#calc">PowerLite Pro G5200WNL *</option> <option value="Epson-PowerLite_Pro_G5350NL-projection-calculator-pro.htm#calc">PowerLite Pro G5350NL *</option> <option value="Epson-PowerLite_Pro_G5450WU-projection-calculator-pro.htm#calc">PowerLite Pro G5450WU *</option> <option value="Epson-PowerLite_Pro_G5450WUNL-projection-calculator-pro.htm#calc">PowerLite Pro G5450WUNL *</option> <option value="Epson-PowerLite_Pro_G5550-projection-calculator-pro.htm#calc">PowerLite Pro G5550 *</option> <option value="Epson-PowerLite_Pro_G5550NL-projection-calculator-pro.htm#calc">PowerLite Pro G5550NL *</option> <option value="Epson-PowerLite_Pro_G5650W-projection-calculator-pro.htm#calc">PowerLite Pro G5650W *</option> <option value="Epson-PowerLite_Pro_G5650WNL-projection-calculator-pro.htm#calc">PowerLite Pro G5650WNL *</option> <option value="Epson-PowerLite_Pro_G5750WU-projection-calculator-pro.htm#calc">PowerLite Pro G5750WU *</option> <option value="Epson-PowerLite_Pro_G5750WUNL-projection-calculator-pro.htm#calc">PowerLite Pro G5750WUNL *</option> <option value="Epson-PowerLite_Pro_G5950-projection-calculator-pro.htm#calc">PowerLite Pro G5950 *</option> <option value="Epson-PowerLite_Pro_G5950NL-projection-calculator-pro.htm#calc">PowerLite Pro G5950NL *</option> <option value="Epson-PowerLite_Pro_G6900-projection-calculator-pro.htm#calc">PowerLite Pro G6900 *</option> <option value="Epson-PowerLite_Pro_Z8000WUNL-projection-calculator-pro.htm#calc">PowerLite Pro Z8000WUNL *</option> <option value="Epson-PowerLite_Pro_Z8050WNL-projection-calculator-pro.htm#calc">PowerLite Pro Z8050WNL *</option> <option value="Epson-PowerLite_Pro_Z8150NL-projection-calculator-pro.htm#calc">PowerLite Pro Z8150NL *</option> <option value="Epson-PowerLite_Pro_Z8250NL-projection-calculator-pro.htm#calc">PowerLite Pro Z8250NL *</option> <option value="Epson-PowerLite_Pro_Z8255NL-projection-calculator-pro.htm#calc">PowerLite Pro Z8255NL *</option> <option value="Epson-PowerLite_Pro_Z8450WUNL-projection-calculator-pro.htm#calc">PowerLite Pro Z8450WUNL *</option> <option value="Epson-PowerLite_Pro_Z8455WUNL-projection-calculator-pro.htm#calc">PowerLite Pro Z8455WUNL *</option> <option value="Epson-PowerLite_S18+-projection-calculator-pro.htm#calc">PowerLite S18+ *</option> <option value="Epson-PowerLite_S27-projection-calculator-pro.htm#calc">PowerLite S27 *</option> <option value="Epson-PowerLite_S3-projection-calculator-pro.htm#calc">PowerLite S3 *</option> <option value="Epson-PowerLite_S39-projection-calculator-pro.htm#calc">PowerLite S39 *</option> <option value="Epson-PowerLite_S4-projection-calculator-pro.htm#calc">PowerLite S4 *</option> <option value="Epson-PowerLite_S5-projection-calculator-pro.htm#calc">PowerLite S5 *</option> <option value="Epson-PowerLite_S6-projection-calculator-pro.htm#calc">PowerLite S6 *</option> <option value="Epson-PowerLite_S7-projection-calculator-pro.htm#calc">PowerLite S7 *</option> <option value="Epson-PowerLite_S9-projection-calculator-pro.htm#calc">PowerLite S9 *</option> <option value="Epson-PowerLite_W16-projection-calculator-pro.htm#calc">PowerLite W16 *</option> <option value="Epson-PowerLite_W17-projection-calculator-pro.htm#calc">PowerLite W17 *</option> <option value="Epson-PowerLite_W29-projection-calculator-pro.htm#calc">PowerLite W29 *</option> <option value="Epson-PowerLite_W39-projection-calculator-pro.htm#calc">PowerLite W39 *</option> <option value="Epson-PowerLite_W6-projection-calculator-pro.htm#calc">PowerLite W6 *</option> <option value="Epson-PowerLite_W7-projection-calculator-pro.htm#calc">PowerLite W7 *</option> <option value="Epson-PowerLite_X12-projection-calculator-pro.htm#calc">PowerLite X12 *</option> <option value="Epson-PowerLite_X15-projection-calculator-pro.htm#calc">PowerLite X15 *</option> <option value="Epson-PowerLite_X17-projection-calculator-pro.htm#calc">PowerLite X17 *</option> <option value="Epson-PowerLite_X27-projection-calculator-pro.htm#calc">PowerLite X27 *</option> <option value="Epson-PowerLite_X39-projection-calculator-pro.htm#calc">PowerLite X39 *</option> <option value="Epson-PowerLite_X9-projection-calculator-pro.htm#calc">PowerLite X9 *</option> <option value="Epson-PowerLite_Pro_Cinema_4030-projection-calculator-pro.htm#calc">Pro 4030 *</option> <option value="Epson-PowerLite_Pro_Cinema_6030UB-projection-calculator-pro.htm#calc">Pro 6030UB *</option> <option value="Epson-Pro_Cinema_1985-projection-calculator-pro.htm#calc">Pro Cinema 1985 *</option> <option value="Epson-Pro_Cinema_4040-projection-calculator-pro.htm#calc">Pro Cinema 4040 *</option> <option value="Epson-PowerLite_Pro_Cinema_4855WU_with_Mount-projection-calculator-pro.htm#calc">Pro Cinema 4855WU with Mount *</option> <option value="Epson-Pro_Cinema_6040UB-projection-calculator-pro.htm#calc">Pro Cinema 6040UB *</option> <option value="Epson-Pro_EX7260-projection-calculator-pro.htm#calc">Pro EX7260 *</option> <option value="Epson-PowerLite_Pro_G6050W-projection-calculator-pro.htm#calc">Pro G6050W *</option> <option value="Epson-PowerLite_Pro_G6050WNL-projection-calculator-pro.htm#calc">Pro G6050WNL *</option> <option value="Epson-PowerLite_Pro_G6070W-projection-calculator-pro.htm#calc">Pro G6070W *</option> <option value="Epson-PowerLite_Pro_G6070WNL-projection-calculator-pro.htm#calc">Pro G6070WNL *</option> <option value="Epson-PowerLite_Pro_G6150-projection-calculator-pro.htm#calc">Pro G6150 *</option> <option value="Epson-PowerLite_Pro_G6150NL-projection-calculator-pro.htm#calc">Pro G6150NL *</option> <option value="Epson-PowerLite_Pro_G6170-projection-calculator-pro.htm#calc">Pro G6170 *</option> <option value="Epson-PowerLite_Pro_G6170NL-projection-calculator-pro.htm#calc">Pro G6170NL *</option> <option value="Epson-PowerLite_Pro_G6270W-projection-calculator-pro.htm#calc">Pro G6270W *</option> <option value="Epson-PowerLite_Pro_G6270WNL-projection-calculator-pro.htm#calc">Pro G6270WNL *</option> <option value="Epson-PowerLite_Pro_G6450WU-projection-calculator-pro.htm#calc">Pro G6450WU *</option> <option value="Epson-PowerLite_Pro_G6450WUNL-projection-calculator-pro.htm#calc">Pro G6450WUNL *</option> <option value="Epson-PowerLite_Pro_G6470WU-projection-calculator-pro.htm#calc">Pro G6470WU *</option> <option value="Epson-PowerLite_Pro_G6470WUNL-projection-calculator-pro.htm#calc">Pro G6470WUNL *</option> <option value="Epson-PowerLite_Pro_G6550WU-projection-calculator-pro.htm#calc">Pro G6550WU *</option> <option value="Epson-PowerLite_Pro_G6550WUNL-projection-calculator-pro.htm#calc">Pro G6550WUNL *</option> <option value="Epson-PowerLite_Pro_G6570WU-projection-calculator-pro.htm#calc">Pro G6570WU *</option> <option value="Epson-PowerLite_Pro_G6570WUNL-projection-calculator-pro.htm#calc">Pro G6570WUNL *</option> <option value="Epson-PowerLite_Pro_G6750WU-projection-calculator-pro.htm#calc">Pro G6750WU *</option> <option value="Epson-PowerLite_Pro_G6750WUNL-projection-calculator-pro.htm#calc">Pro G6750WUNL *</option> <option value="Epson-PowerLite_Pro_G6770WU-projection-calculator-pro.htm#calc">Pro G6770WU *</option> <option value="Epson-PowerLite_Pro_G6770WUNL-projection-calculator-pro.htm#calc">Pro G6770WUNL *</option> <option value="Epson-PowerLite_Pro_G6800-projection-calculator-pro.htm#calc">Pro G6800 *</option> <option value="Epson-PowerLite_Pro_G6800NL-projection-calculator-pro.htm#calc">Pro G6800NL *</option> <option value="Epson-PowerLite_Pro_G6870-projection-calculator-pro.htm#calc">Pro G6870 *</option> <option value="Epson-PowerLite_Pro_G6870NL-projection-calculator-pro.htm#calc">Pro G6870NL *</option> <option value="Epson-PowerLite_Pro_G6900WU-projection-calculator-pro.htm#calc">Pro G6900WU *</option> <option value="Epson-PowerLite_Pro_G6900WUNL-projection-calculator-pro.htm#calc">Pro G6900WUNL *</option> <option value="Epson-PowerLite_Pro_G6970WU-projection-calculator-pro.htm#calc">Pro G6970WU *</option> <option value="Epson-PowerLite_Pro_G6970WUNL-projection-calculator-pro.htm#calc">Pro G6970WUNL *</option> <option value="Epson-Pro_G7000W-projection-calculator-pro.htm#calc">Pro G7000W *</option> <option value="Epson-Pro_G7000WNL-projection-calculator-pro.htm#calc">Pro G7000WNL *</option> <option value="Epson-Pro_G7100-projection-calculator-pro.htm#calc">Pro G7100 *</option> <option value="Epson-Pro_G7100NL-projection-calculator-pro.htm#calc">Pro G7100NL *</option> <option value="Epson-Pro_G7200W-projection-calculator-pro.htm#calc">Pro G7200W *</option> <option value="Epson-Pro_G7200WNL-projection-calculator-pro.htm#calc">Pro G7200WNL *</option> <option value="Epson-Pro_G7400UNL-projection-calculator-pro.htm#calc">Pro G7400UNL *</option> <option value="Epson-Pro_G7500U-projection-calculator-pro.htm#calc">Pro G7500U *</option> <option value="Epson-Pro_G7500UNL-projection-calculator-pro.htm#calc">Pro G7500UNL *</option> <option value="Epson-Pro_G7805-projection-calculator-pro.htm#calc">Pro G7805 *</option> <option value="Epson-Pro_G7805NL-projection-calculator-pro.htm#calc">Pro G7805NL *</option> <option value="Epson-Pro_G7905U-projection-calculator-pro.htm#calc">Pro G7905U *</option> <option value="Epson-Pro_G7905UNL-projection-calculator-pro.htm#calc">Pro G7905UNL *</option> <option value="Epson-Pro_L1060U-projection-calculator-pro.htm#calc">Pro L1060U *</option> <option value="Epson-Pro_L1070U-projection-calculator-pro.htm#calc">Pro L1070U *</option> <option value="Epson-Pro_L1070UNL-projection-calculator-pro.htm#calc">Pro L1070UNL *</option> <option value="Epson-Pro_L1070W-projection-calculator-pro.htm#calc">Pro L1070W *</option> <option value="Epson-Pro_L1070WNL-projection-calculator-pro.htm#calc">Pro L1070WNL *</option> <option value="Epson-Pro_L1075U-projection-calculator-pro.htm#calc">Pro L1075U *</option> <option value="Epson-Pro_L1075UNL-projection-calculator-pro.htm#calc">Pro L1075UNL *</option> <option value="Epson-Pro_L1100U-projection-calculator-pro.htm#calc">Pro L1100U *</option> <option value="Epson-Pro_L1100UNL-projection-calculator-pro.htm#calc">Pro L1100UNL *</option> <option value="Epson-Pro_L1200U-projection-calculator-pro.htm#calc">Pro L1200U *</option> <option value="Epson-Pro_L1200UNL-projection-calculator-pro.htm#calc">Pro L1200UNL *</option> <option value="Epson-Pro_L1300U-projection-calculator-pro.htm#calc">Pro L1300U *</option> <option value="Epson-Pro_L1300UNL-projection-calculator-pro.htm#calc">Pro L1300UNL *</option> <option value="Epson-Pro_L1405U-projection-calculator-pro.htm#calc">Pro L1405U *</option> <option value="Epson-Pro_L1405UNL-projection-calculator-pro.htm#calc">Pro L1405UNL *</option> <option value="Epson-Pro_L1490U-projection-calculator-pro.htm#calc">Pro L1490U *</option> <option value="Epson-Pro_L1495U-projection-calculator-pro.htm#calc">Pro L1495U *</option> <option value="Epson-Pro_L1500U-projection-calculator-pro.htm#calc">Pro L1500U *</option> <option value="Epson-Pro_L1500UH-projection-calculator-pro.htm#calc">Pro L1500UH *</option> <option value="Epson-Pro_L1500UNL-projection-calculator-pro.htm#calc">Pro L1500UNL *</option> <option value="Epson-Pro_L1505U-projection-calculator-pro.htm#calc">Pro L1505U *</option> <option value="Epson-Pro_L1505UH-projection-calculator-pro.htm#calc">Pro L1505UH *</option> <option value="Epson-Pro_L1505UNL-projection-calculator-pro.htm#calc">Pro L1505UNL *</option> <option value="Epson-Pro_L25000U-projection-calculator-pro.htm#calc">Pro L25000U *</option> <option value="Epson-LS10000-projection-calculator-pro.htm#calc">Pro LS10000 *</option> <option value="Epson-Pro_Cinema_LS10500-projection-calculator-pro.htm#calc">Pro LS10500 *</option> <option value="Epson-Pro_Cinema_LS9600e-projection-calculator-pro.htm#calc">Pro LS9600e *</option> <option value="Epson-PowerLite_Pro_Z10000UNL-projection-calculator-pro.htm#calc">Pro Z10000UNL *</option> <option value="Epson-PowerLite_Pro_Z10005UNL-projection-calculator-pro.htm#calc">Pro Z10005UNL *</option> <option value="Epson-PowerLite_Pro_Z11000WNL-projection-calculator-pro.htm#calc">Pro Z11000WNL *</option> <option value="Epson-PowerLite_Pro_Z11005NL-projection-calculator-pro.htm#calc">Pro Z11005NL *</option> <option value="Epson-PowerLite_Pro_Z8350WNL-projection-calculator-pro.htm#calc">Pro Z8350WNL *</option> <option value="Epson-PowerLite_Pro_Z9750UNL-projection-calculator-pro.htm#calc">Pro Z9750UNL *</option> <option value="Epson-PowerLite_Pro_Z9800WNL-projection-calculator-pro.htm#calc">Pro Z9800WNL *</option> <option value="Epson-PowerLite_Pro_Z9870NL-projection-calculator-pro.htm#calc">Pro Z9870NL *</option> <option value="Epson-PowerLite_Pro_Z9870UNL-projection-calculator-pro.htm#calc">Pro Z9870UNL *</option> <option value="Epson-PowerLite_Pro_Z9900WNL-projection-calculator-pro.htm#calc">Pro Z9900WNL *</option> <option value="Epson-TW100-projection-calculator-pro.htm#calc">TW100 *</option> <option value="Epson-VS200-projection-calculator-pro.htm#calc">VS200 *</option> <option value="Epson-VS230-projection-calculator-pro.htm#calc">VS230 *</option> <option value="Epson-VS240-projection-calculator-pro.htm#calc">VS240 *</option> <option value="Epson-VS310-projection-calculator-pro.htm#calc">VS310 *</option> <option value="Epson-VS315W-projection-calculator-pro.htm#calc">VS315W *</option> <option value="Epson-VS330-projection-calculator-pro.htm#calc">VS330 *</option> <option value="Epson-VS335W-projection-calculator-pro.htm#calc">VS335W *</option> <option value="Epson-VS340-projection-calculator-pro.htm#calc">VS340 *</option> <option value="Epson-VS345-projection-calculator-pro.htm#calc">VS345 *</option> <option value="Epson-VS350-projection-calculator-pro.htm#calc">VS350 *</option> <option value="Epson-VS350W-projection-calculator-pro.htm#calc">VS350W *</option> <option value="Epson-VS355-projection-calculator-pro.htm#calc">VS355 *</option> <option value="Epson-VS400-projection-calculator-pro.htm#calc">VS400 *</option> <option value="Epson-VS410-projection-calculator-pro.htm#calc">VS410 *</option> </optgroup> </select> 
+						</form>
+					</div>
+				</div>
+			</div>
+
+			
+			<div id="calcThrowForm" class="calc-search">
+				
+				<form action="projectors.cfm#list" method="get" class="calc-mfg-form">
+					<input type="hidden" name="g" value="2">
+					<div class="search-row" style="align-items:flex-end;justify-content:space-between;">
+						<div class="calc-throw-form">
+							<h3>Throw Distance</h3>
+							<input type="text" name="td_m" value="" placeholder="meters" id="calcThrowInput">
+						</div>
+						<div class="calc-image-size-form">
+							<h3>Image Size</h3>
+							<input type="text" name="is_m" value="" placeholder="centimeters" id="calcSizeInput">
+						</div>
+						<div style="margin-bottom:20px;">
+							<select name="i" style="margin-bottom:0;">
+								<option value="d">Diagonal</option>
+								<option value="w">Width</option>
+								<option value="h">Height</option>
+							</select>
+						</div>
+						<div class="calc-units-form">
+							<h3>Units</h3>
+							<div class="calc-units-wrap">
+								<input type="radio" name="metric" id="met-1" value="1" checked onclick="calcMetricChange(this);">
+								<label for="met-1">Metric</label>
+
+								<input type="radio" name="metric" id="met-0" value="0"  onclick="calcMetricChange(this);">
+								<label for="met-0">Imperial</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="calc-throw-divider-dp"></div>
+
+					<div class="search-row" style="align-items:flex-end;justify-content:space-between;">
+
+						<div class="calc-tr-form">
+							<h4>Min / Max Throw Ratio</h4>
+							<input type="text" name="tr" value="" placeholder="Min">
+						</div>
+						<div class="calc-dash tbdp">&mdash;</div>
+						<div class="calc-tr-form">
+							<h5>Distance / Width = Throw Ratio (e.g. 1.50)</h5>
+							<input type="text" name="tr2" value="" placeholder="Max">
+						</div>
+						<div>
+							<input type="submit">
+						</div>
+					</div>
+					<input type="hidden" name="exp4" value="1">
+					<input type="hidden" name="exp5" value="0">
+				</form>
+			</div>
+
+		</div>
+		
+	</div>
+
+</section>
+
+<hr class="calc-divider">
+
+
+	<section>
+
+	
+	
+	<a name="calc" style="display: block;position: relative;top: -95px;visibility: hidden;"></a>
+
+	<div class="part-header">
+
+		
+		
+		<!-- <div class="pj-photo"><a href="Canon-REALiS_WUX500ST.htm" title="Click for more information on the Canon REALiS WUX500ST projector."><img src="/images/projectors2/img10004.jpg"></a></div> -->
+
+		
+		<div class="pj-specs">
+
+			<h2><a href="Canon-REALiS_WUX500ST.htm" title="Click for more information on the Canon REALiS WUX500ST projector.">Canon REALiS WUX500ST</a></h2>
+			
+			<p> 1920x1200&nbsp;LCoS, 5,000&nbsp;lumens, 2,000:1&nbsp;contrast,  13.9&nbsp;lbs</p>
+
+			
+
+			
+			
+					<a class="pj-add-to-compare" href="Canon-REALiS_WUX500ST-projection-calculator-pro.htm?add=10004" rel="nofollow">Add to Compare List</a>
+				
+
+			
+			<a class="pj-details-button" href="Canon-REALiS_WUX500ST.htm" title="Click for more information on the Canon REALiS WUX500ST projector.">Projector Details</a>
+
+			
+			
+				<a class="pj-buy-online" href='Canon-REALiS_WUX500ST-prices.htm' title='Best deals on the Canon REALiS WUX500ST projector'>$6,227 Buy Online</a>
+			
+		</div>
+
+		
+		<!-- <div class="calc-sponsor">
+			
+			<div class="addDiv4" id="bt_11" data-bid="11608"> <a href="https://ad.doubleclick.net/ddm/clk/496287721;302987465;z" id="bn11608" target="_11608" rel="nofollow external noopener"> <img src="/bc4284.htm?bid=11608&i=1&cb=11-03-2021-10-26-55&pg=Canon%2DREALiS%5FWUX500ST%2Dprojection%2Dcalculator%2Dpro%2Ehtm" alt="EPSON" style="max-width:100%;width:200px;height:200px;object-fit:contain;"> </a> </div> 
+		</div> -->
+
+		
+	</div>
+	</section>
+
+
+	
+
+	<section>
+		<!-- <iframe class="calcRespFrame" frameborder="0" scrolling="no" id="pcCalcIFrame" onload="resizeIframe(this);" src="https://www.projectorcentral.com/calc3/14/index.cfm?part_id=10004&metric=1">The calculator is not supported by this browser (no iframe support).</iframe>
+
+		<div class="print-btn-ff" onclick="beforePrintIFrame();">Printer Friendly for FireFox</div> -->
+
+
+		<iframe class="calcRespFrame" frameborder="0" scrolling="no" id="pcCalcIFrame" onload="resizeIframe(this);" 
+		<!-- src="https://www.projectorcentral.com/calc3/14/index.cfm?part_id=10004&metric=1" -->
+		>
+		
+			<html lang="en" class="no-js"><!--<![endif]--><head>
+				<title>Projection Calculator Pro v.3</title>
+				<meta charset="utf-8">
+				<link rel="stylesheet" href="calc.css?v=3">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+				<!--[if lt IE 9]>
+				<script src="html5shiv.js"></script>
+				<![endif]-->
+		
+				<script src="https://script.crazyegg.com/pages/versioned/common-scripts/11.1.356.js" type="text/javascript" async=""></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+				<script src="underscore.js"></script>
+				<script src="backbone.js"></script>
+				<script src="bootstrap.js"></script>
+		
+		
+				
+				<script type="text/javascript">
+					$(document).ready(function() {
+						var opts = {};
+						
+						
+							opts = {"partId":10004,"metric":true};
+						
+						
+						var app = new com.projectorcentral.CalculatorApp(opts);
+					});
+				</script>
+				
+				<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0082/4468.js" async="async"></script>
+		
+		
+			</head>
+			<body class="embedded" data-new-gr-c-s-check-loaded="14.1037.0" data-gr-ext-installed="" style="">
+				
+				<article id="calc-root" class="calc-root running">
+					<section id="toolbar" class="toolbar">
+						<div id="pj-lens-specs" class="pj-lens-specs"><div class="projector-spec-view"><div class="lens-specs"><img src="lens.svg"><b>Lens</b><div class="lens-container"><span>Standard Lens</span><small>Throw Ratio: 0.56, f/2.7</small></div></div></div></div>
+						<div class="ar-container"><img src="aspect-ratio.svg"><div class="btnLabel">Aspect Ratio</div><button class="popup-select-button" title="Click to change the aspect ratio of the projected image">16:10</button></div>
+						<button class="show-units-button" title="Click to change the units used in the calculator">Units</button>
+					</section>
+					<header>
+						<div id="topSlidersContainer">
+							<div id="throwInput">
+								<div class="throw-labels">
+									<img src="ThrowDistance.svg"><label>Throw Distance</label>
+									<div id="throwInputForm"><div class="numeric-input-view active" title="Enter your desired throw distance" style="margin-left: 10px; position: relative;"><input type="text"><button type="button" class="inc" title="Click to increment this value"></button><button type="button" class="dec" title="Click to decrement this value"></button></div></div>
+									<button id="throwLockBtn" class="unlock" title="Lock the Throw Distance at this distance" style="display: none;"></button>
+								</div>
+								<section class="sliders">
+									<div id="throw-slider" class="throw-slider slider-wrap"><div class="slider-view"><div class="slider-track" style="border-color: rgb(51, 150, 210);"><button class="slider-view-thumb" style="left: 216.625px;"></button></div><div class="slider-track-zoom-overlay" style="display: none;"></div><div class="slider-track-overlay-label slider-track-zoom-overlay-label-start">0 m</div><div class="slider-track-overlay-label slider-track-zoom-overlay-label-min" style="display: none;"></div><div class="slider-track-overlay-label slider-track-zoom-overlay-label-value" style="display: block; left: 42.6412%; margin-left: -51.5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.28 m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div class="slider-track-overlay-label slider-track-zoom-overlay-label-max" style="display: none;"></div><div class="slider-track-overlay-label slider-track-zoom-overlay-label-end">5.36 m</div></div></div>
+									<div id="throw-ruler" class="throw-ruler ruler-wrap"></div>
+								</section>
+							</div>
+							<div id="sliderSpacer"></div>
+							<div id="imageSizeInput">
+								<div class="image-size-labels">
+									<img src="diagonal.svg" id="isIcon"><label>Image Size</label>
+									<div id="imageSizeInputForm"><div class="numeric-input-view active" title="Enter your desired screen height" style="position: relative; margin-left: 10px; display: none;"><input type="text"><button type="button" class="inc" title="Click to increment this value"></button><button type="button" class="dec" title="Click to decrement this value"></button></div><div class="numeric-input-view active" title="Enter your desired screen width" style="position: relative; margin-left: 10px; display: none;"><input type="text"><button type="button" class="inc" title="Click to increment this value"></button><button type="button" class="dec" title="Click to decrement this value"></button></div><div class="numeric-input-view active" title="Enter your desired screen diagonal" style="position: relative; margin-left: 10px; display: inline-block;"><input type="text"><button type="button" class="inc" title="Click to increment this value"></button><button type="button" class="dec" title="Click to decrement this value"></button></div></div>
+									<button id="imageLockBtn" class="unlock" title="Lock the Image Size to this size" style="display: none;"></button>
+									<button class="popup-select-button">Diagonal</button>
+								</div>
+								<section class="sliders">
+									<div id="image-slider" class="image-slider slider-wrap"><div class="slider-view"><div class="slider-track" style="border-color: rgb(51, 150, 210);"><button class="slider-view-thumb" style="left: 42.6412%;"></button></div><div class="slider-track-zoom-overlay" style="display: none;"></div><div class="slider-track-overlay-label slider-track-zoom-overlay-label-start">0 cm</div><div class="slider-track-overlay-label slider-track-zoom-overlay-label-min" style="display: none;"></div><div class="slider-track-overlay-label slider-track-zoom-overlay-label-value" style="display: block; left: 42.6412%; margin-left: -53px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;481 cm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div class="slider-track-overlay-label slider-track-zoom-overlay-label-max" style="display: none;"></div><div class="slider-track-overlay-label slider-track-zoom-overlay-label-end">1128 cm</div></div></div>
+									<div id="image-ruler" class="image-ruler ruler-wrap"></div>
+								</section>
+							</div>
+						</div>
+					</header>
+		
+					<section id="setup-view" class="setup-view">
+						<div class="appTop"></div>
+						<div id="screen-image-view" class="setup-view-container"><canvas class="screen-image-view" width="140" height="159" data-pixel-ratio="1" style="width: 99.8489px; height: 113.4px; margin-left: -99.8489px; margin-top: -56.6999px; left: 1050px; top: 145px;"></canvas></div>
+						<div id="screen-image-markup-view" class="setup-view-container"><div class="screen-image-markup-view"><canvas width="1120" height="270" data-pixel-ratio="1" style="width: 1120px; height: 270px;"></canvas><div class="numeric-input-display" style="top: 205.658px; left: 965.564px;"><output>+ 127 cm</output></div><div class="vertical-offset-info-icon" style="top: 205.658px; left: 1029.56px;"></div><div class="numeric-input-display" style="top: 55.204px; left: 1064.11px;"><output>481 cm</output></div><div class="numeric-input-display" style="top: 66.1889px; left: 976.081px;"><output>408 cm</output></div><div class="numeric-input-display" style="top: 135.512px; left: 1067.11px;"><output>255 cm</output></div></div></div>
+						<div id="projector-setup-view" class="setup-view-container"><div class="projector-setup-view"><canvas class="projector-distance-line" width="1120" height="270" data-pixel-ratio="1" style="width: 1120px; height: 270px;"></canvas><div class="projector-image-view" style="margin-left: -1px; margin-top: -14px; width: 81px; height: 30px; left: 509.483px; top: 145px;"><img id="pjIcon" draggable="false" ondragstart="return false;" src="projector.svg"></div><div class="numeric-input-display" style="left: 521.983px; top: 205px;"><output>2.28 m</output></div><output class="throw-dist-label" style="left: 486.483px; top: 180px;">Throw Distance</output></div></div>
+					</section>
+					<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;">
+						<div id="zoomInput" style="display: none;">
+							<label>Zoom Range</label>
+							<div style="width:199px;display:inline-block;vertical-align:top;">
+								<div style="margin-bottom:-10px;">
+									<div class="zoom-label-min">Telephoto</div>
+									<div class="zoom-label-max">Wide Angle</div>
+								</div>
+		
+								<section class="sliders">
+									
+		
+									<div id="zoom-slider" class="zoom-slider slider-wrap"><div class="slider-view"><div class="slider-track-dark" style="border-color: rgb(51, 150, 210);"><button class="slider-view-thumb"></button></div><div style="display: none;"></div><div></div><div style="display: none;"></div><div style="display: block;"></div><div style="display: none;"></div><div></div></div></div>
+									<div id="zoom-slider-labels" class="zoom-slider-labels"><div class="zoom-range-view"><output class="zoom-range-min-value"></output><output class="zoom-range-max-value"></output><output class="zoom-ratio-value" style="margin-left: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NaNx&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</output></div></div>
+								</section>
+							</div>
+						</div>
+						<label class="aaaceiling-mount">Потолочное крепление<input type="checkbox" id="ceiling-mount-btn"><span class="checkmark" title="aaa"></span></label>
+					</div>
+					<section id="image-brightness-container"><div class="image-brightness-view"><div class="image-title-row"><div class="image-brightness-title">Estimated <br class="mb">Image Brightness</div><div class="screen-gain-container"><div class="screen-gain-label">Screen Gain</div><div class="numeric-input-view compact active" title="Enter your desired screen gain"><input type="text"><button type="button" class="inc" title="Click to increment this value"></button><button type="button" class="dec" title="Click to decrement this value"></button></div></div></div><div class="lumen-mode-radios" style="display: none;"><div style="margin-right:20px;margin-bottom:5px;"><input type="radio" name="lumenMode" value="1" title="Use ProjectorCentral measured specs and formulas for estimating image brightness">ProjectorCentral's Estimate</div><div><input type="radio" name="lumenMode" value="2" title="Use the manufacturer's full specs for estimating image brightness">Manufacturer's Spec</div></div><div class="color-bar-row"><div class="color-bar-container"><canvas class="color-bar-canvas" width="223" height="8"></canvas><canvas class="color-bar-canvas" width="223" height="8"></canvas></div><output title="This is the current measurement for the brightness of the projected image" class="image-brightness-value" id="image-brightness-value">153 nits</output><div class="image-brightness-recommendation">Recommended image brightness for rooms with <b>low</b> ambient light</div></div></div></section>
+					<section id="lens-shift-text-container"><div class="lens-shift-text-view" style="display: block;"><div class="lens-shift-text-title">Lens Shift</div><div class="lens-shift-text">At this throw distance, with a centered image, the projected image can be shifted an additional <b>191 cm</b> up from the top, <b>41 cm</b> over from the left, and <b>41 cm</b> over from the right edge of the image using the projector's lens shift capability.</div></div></section>
+					
+					<div id="modal-container" class="modal-container"></div>
+				</article>
+				<section id="app-error" class="app-error" style="display: none;"></section>
+				<header class="app-header localizable" id="app-header">
+					Powered by ProjectorCentral.com. ©1999–2021 All Rights Reserved.
+				</header>
+				<section id="disclaimer" class="disclaimer localizable"><strong>Caution:</strong> Numbers are based on manufacturer supplied information, which may have changed or could be inaccurate. ProjectorCentral is not responsible for erroneous calculator results. If you encounter any obvious errors please notify us below.</section>
+				<div id="calc-version" class="calc-version">3.0 (14)</div>
+			
+		
+		</body>
+	</html>
+			
+			
+		
+		
+		
+		The calculator is not supported by this browser (no iframe support).
+		</iframe>
+
+		<div class="print-btn-ff" onclick="beforePrintIFrame();">Printer Friendly for FireFox</div>
+
+
+
+
+
+	</section>
+
+
+<div class="calc-faq">
+	
+</div>
+
+
+
+<!-- <script src="/pp/pp.cfm?c=10004&cb=20211103102655"></script>  -->
+
+
+<!-- <script type="text/javascript" src="jquery.autocomplete.fixed.js"></script> -->
+
+<!-- <script type="text/javascript">
+	$(document).ready(function() {
+		$("#pjSearchBox").autocomplete(
+			"/calc3/_rtn_calc_pj.cfm",
+			{
+				delay:10,
+				minChars:2,
+				matchSubset:1,
+				matchContains:1,
+				width:350,
+				cacheLength:10,
+				onItemSelect:jumpToPage,
+				onFindValue:jumpToPage,
+				//formatItem:formatItem, // Function to format each row of output display
+				autoFill:true
+			}
+		);
+	});
+	function jumpToPage(li) {
+		window.location.href = li.extra[1]+"-projection-calculator-pro.htm#calc";
+		
+	}
+
+
+
+	document.getElementById("calcThrowTab").addEventListener("click", calcTabChange);
+	function calcTabChange() {
+		if (document.getElementById("calcPJTab").classList.contains('active')){
+
+			document.getElementById("calcThrowTab").classList.add("active");
+			document.getElementById("calcThrowForm").classList.add("active");
+			document.getElementById("calcThrowTab").removeEventListener("click", calcTabChange);
+
+			document.getElementById("calcPJTab").classList.remove("active");
+			document.getElementById("calcPJForm").classList.remove("active");
+			document.getElementById("calcPJTab").addEventListener("click", calcTabChange);
+
+		} else {
+			document.getElementById("calcPJTab").classList.add("active");
+			document.getElementById("calcPJForm").classList.add("active");
+			document.getElementById("calcPJTab").removeEventListener("click", calcTabChange);
+
+			document.getElementById("calcThrowTab").classList.remove("active");
+			document.getElementById("calcThrowForm").classList.remove("active");
+			document.getElementById("calcThrowTab").addEventListener("click", calcTabChange);
+		}
+	}
+
+	function calcMetricChange(e) {
+
+		if(e.value == 1) {
+			document.getElementById("calcThrowInput").placeholder = 'meters';
+			document.getElementById("calcSizeInput").placeholder = 'centimeters';
+			document.getElementById("calcThrowInput").setAttribute('name', 'td_m');
+			document.getElementById("calcSizeInput").setAttribute('name', 'is_m');
+		} else {
+			document.getElementById("calcThrowInput").placeholder = 'feet';
+			document.getElementById("calcSizeInput").placeholder = 'inches';
+			document.getElementById("calcThrowInput").setAttribute('name', 'td');
+			document.getElementById("calcSizeInput").setAttribute('name', 'is');
+		}
+	}
+
+
+</script> -->
+
+
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+
+<div class="footer-strip">
+	<div class="footer-container">
+		
+	</div>
+</div>
+
+
+
+	<script src="_wrapper_src.js" ></script>
+
+
+</div>
+
+</body>
+</html> 
